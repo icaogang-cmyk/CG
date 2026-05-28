@@ -116,75 +116,102 @@
 
 <style>
 .rev-chart-host { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 22px 28px 18px; margin: 14px 0; }
-.rev-chart-host * { box-sizing: border-box; }
-.rev-chart-host .rc-title { background: #eaf0fb; text-align: center; padding: 10px; font-size: 14px; color: #1a3a72; font-weight: 600; margin-bottom: 18px; border-radius: 3px; }
-.rev-chart-host .rc-canvas { position: relative; height: 280px; display: grid; grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px; gap: 8px; align-items: end; padding: 14px 0; border-bottom: 1.5px solid #999; }
-.rev-chart-host .rc-yaxis { display: flex; flex-direction: column; justify-content: space-between; font-size: 11px; color: #666; padding: 0 6px; height: 100%; }
-.rev-chart-host .rc-yaxis.right { text-align: left; color: #f0a040; }
-.rev-chart-host .rc-bar-col { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
-.rev-chart-host .rc-label-top { position: absolute; top: -22px; left: 50%; transform: translateX(-50%); font-size: 12px; color: #1a1a1a; font-weight: 700; white-space: nowrap; }
-.rev-chart-host .rc-bar { width: 56%; display: flex; flex-direction: column; justify-content: flex-end; }
-.rev-chart-host .rc-bar .seg { color: #fff; text-align: center; font-size: 11px; font-weight: 600; padding: 4px 0; }
-.rev-chart-host .rc-bar .seg.green { background: #9ec88d; color: #1a3a1a; }
-.rev-chart-host .rc-bar .seg.blue { background: #7a9ec8; }
-.rev-chart-host .rc-line-svg { position: absolute; top: 0; left: 50px; right: 50px; bottom: 0; pointer-events: none; }
-.rev-chart-host .rc-xaxis { display: grid; grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px; gap: 8px; margin-top: 8px; font-size: 12px; color: #333; text-align: center; }
-.rev-chart-host .rc-legend { display: flex; justify-content: center; gap: 28px; margin-top: 12px; font-size: 12px; color: #333; }
+.rev-chart-host .rc-title { background: #eaf0fb; text-align: center; padding: 10px; font-size: 14px; color: #1a3a72; font-weight: 600; margin-bottom: 8px; border-radius: 3px; }
+.rev-chart-host svg { width: 100%; height: auto; display: block; }
+.rev-chart-host .rc-legend { display: flex; justify-content: center; gap: 28px; margin-top: 10px; font-size: 12px; color: #333; }
 .rev-chart-host .rc-legend .item { display: flex; align-items: center; gap: 6px; }
-.rev-chart-host .rc-legend .sw { width: 14px; height: 12px; }
+.rev-chart-host .rc-legend .sw { width: 14px; height: 12px; display: inline-block; }
 .rev-chart-host .rc-legend .sw.blue { background: #7a9ec8; }
 .rev-chart-host .rc-legend .sw.green { background: #9ec88d; }
-.rev-chart-host .rc-legend .sw.line { background: #f0a040; height: 2px; width: 18px; position: relative; }
-.rev-chart-host .rc-legend .sw.line::after { content: ""; position: absolute; top: -3px; left: 6px; width: 8px; height: 8px; background: #f0a040; border-radius: 50%; }
+.rev-chart-host .rc-legend .sw.line { background: #f0a040; height: 2px; width: 22px; position: relative; }
+.rev-chart-host .rc-legend .sw.line::after { content: ""; position: absolute; top: -3px; left: 7px; width: 8px; height: 8px; background: #f0a040; border-radius: 50%; }
 </style>
 
 <div class="rev-chart-host">
   <div class="rc-title">AI 产品收入带动整体业务三年持续增长（2026-2028年）　单位：万元</div>
-  <div class="rc-canvas">
-    <div class="rc-yaxis">
-      <span>30,000</span><span>25,000</span><span>20,000</span><span>15,000</span><span>10,000</span><span>5,000</span><span>0</span>
-    </div>
-    <div class="rc-bar-col">
-      <div class="rc-label-top">4247</div>
-      <div class="rc-bar" style="height: 14.2%;">
-        <div class="seg blue" style="flex:1;">100%</div>
-      </div>
-    </div>
-    <div class="rc-bar-col">
-      <div class="rc-label-top">8338（+96%）</div>
-      <div class="rc-bar" style="height: 27.8%;">
-        <div class="seg green" style="flex:28;">28%</div>
-        <div class="seg blue" style="flex:72;">72%</div>
-      </div>
-    </div>
-    <div class="rc-bar-col">
-      <div class="rc-label-top">14,473（+74%）</div>
-      <div class="rc-bar" style="height: 48.3%;">
-        <div class="seg green" style="flex:50;">50%</div>
-        <div class="seg blue" style="flex:50;">50%</div>
-      </div>
-    </div>
-    <div class="rc-bar-col">
-      <div class="rc-label-top">24,472（+69%）</div>
-      <div class="rc-bar" style="height: 81.6%;">
-        <div class="seg green" style="flex:62;">62%</div>
-        <div class="seg blue" style="flex:38;">38%</div>
-      </div>
-    </div>
-    <div class="rc-yaxis right">
-      <span>70%</span><span>60%</span><span>50%</span><span>40%</span><span>30%</span><span>20%</span><span>10%</span><span>0%</span>
-    </div>
-    <svg class="rc-line-svg" viewBox="0 0 400 280" preserveAspectRatio="none">
-      <polyline points="50,270 150,200 250,140 350,90" fill="none" stroke="#f0a040" stroke-width="2.5"/>
-      <circle cx="50" cy="270" r="5" fill="#f0a040"/>
-      <circle cx="150" cy="200" r="5" fill="#f0a040"/>
-      <circle cx="250" cy="140" r="5" fill="#f0a040"/>
-      <circle cx="350" cy="90" r="5" fill="#f0a040"/>
-    </svg>
-  </div>
-  <div class="rc-xaxis">
-    <span></span><span>25年</span><span>26年</span><span>27年</span><span>28年</span><span></span>
-  </div>
+  <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg">
+    <!-- Grid lines -->
+    <g stroke="#eee" stroke-width="1">
+      <line x1="70" y1="40"  x2="820" y2="40"/>
+      <line x1="70" y1="85"  x2="820" y2="85"/>
+      <line x1="70" y1="130" x2="820" y2="130"/>
+      <line x1="70" y1="175" x2="820" y2="175"/>
+      <line x1="70" y1="220" x2="820" y2="220"/>
+      <line x1="70" y1="265" x2="820" y2="265"/>
+    </g>
+    <!-- X axis -->
+    <line x1="70" y1="310" x2="820" y2="310" stroke="#888" stroke-width="1.2"/>
+
+    <!-- Left Y axis labels -->
+    <g font-size="11" fill="#666" text-anchor="end" font-family="-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <text x="62" y="44">30,000</text>
+      <text x="62" y="89">25,000</text>
+      <text x="62" y="134">20,000</text>
+      <text x="62" y="179">15,000</text>
+      <text x="62" y="224">10,000</text>
+      <text x="62" y="269">5,000</text>
+      <text x="62" y="314">0</text>
+    </g>
+
+    <!-- Right Y axis labels (%) -->
+    <g font-size="11" fill="#f0a040" text-anchor="start" font-family="-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <text x="830" y="44">70%</text>
+      <text x="830" y="83">60%</text>
+      <text x="830" y="121">50%</text>
+      <text x="830" y="160">40%</text>
+      <text x="830" y="198">30%</text>
+      <text x="830" y="237">20%</text>
+      <text x="830" y="275">10%</text>
+      <text x="830" y="314">0%</text>
+    </g>
+
+    <!-- 25年 Bar: total 4247, 100% base, bar from y=271.8 to y=310, x=113.75 to 213.75 -->
+    <rect x="113.75" y="271.77" width="100" height="38.23" fill="#7a9ec8"/>
+    <text x="163.75" y="294" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">100%</text>
+    <text x="163.75" y="264" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700">4247</text>
+
+    <!-- 26年 Bar: total 8338, 72% base + 28% AI, bar from y=234.96 to y=310 -->
+    <!-- AI segment 28%: y=234.96 to 255.97 (height 21.01) -->
+    <rect x="301.25" y="234.96" width="100" height="21.01" fill="#9ec88d"/>
+    <text x="351.25" y="249" text-anchor="middle" font-size="12" fill="#1a3a1a" font-weight="600">28%</text>
+    <!-- Base segment 72%: y=255.97 to 310 (height 54.03) -->
+    <rect x="301.25" y="255.97" width="100" height="54.03" fill="#7a9ec8"/>
+    <text x="351.25" y="287" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">72%</text>
+    <text x="351.25" y="227" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700">8,338（+96%）</text>
+
+    <!-- 27年 Bar: total 14473, 50% base + 50% AI, bar from y=179.74 to y=310 -->
+    <!-- AI segment 50%: y=179.74 to 244.87 (height 65.13) -->
+    <rect x="488.75" y="179.74" width="100" height="65.13" fill="#9ec88d"/>
+    <text x="538.75" y="216" text-anchor="middle" font-size="12" fill="#1a3a1a" font-weight="600">50%</text>
+    <!-- Base segment 50%: y=244.87 to 310 -->
+    <rect x="488.75" y="244.87" width="100" height="65.13" fill="#7a9ec8"/>
+    <text x="538.75" y="281" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">50%</text>
+    <text x="538.75" y="172" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700">14,473（+74%）</text>
+
+    <!-- 28年 Bar: total 24472, 38% base + 62% AI, bar from y=89.75 to y=310 -->
+    <!-- AI segment 62%: y=89.75 to 226.30 (height 136.55) -->
+    <rect x="676.25" y="89.75" width="100" height="136.55" fill="#9ec88d"/>
+    <text x="726.25" y="161" text-anchor="middle" font-size="12" fill="#1a3a1a" font-weight="600">62%</text>
+    <!-- Base segment 38%: y=226.30 to 310 -->
+    <rect x="676.25" y="226.30" width="100" height="83.70" fill="#7a9ec8"/>
+    <text x="726.25" y="271" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">38%</text>
+    <text x="726.25" y="82" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700">24,472（+69%）</text>
+
+    <!-- X axis labels -->
+    <g font-size="13" fill="#333" text-anchor="middle" font-family="-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+      <text x="163.75" y="334">25年</text>
+      <text x="351.25" y="334">26年</text>
+      <text x="538.75" y="334">27年</text>
+      <text x="726.25" y="334">28年</text>
+    </g>
+
+    <!-- Trend line (AI revenue share) -->
+    <polyline points="163.75,306 351.25,202 538.75,117 726.25,71" fill="none" stroke="#f0a040" stroke-width="2.5"/>
+    <circle cx="163.75" cy="306" r="5" fill="#f0a040"/>
+    <circle cx="351.25" cy="202" r="5" fill="#f0a040"/>
+    <circle cx="538.75" cy="117" r="5" fill="#f0a040"/>
+    <circle cx="726.25" cy="71" r="5" fill="#f0a040"/>
+  </svg>
   <div class="rc-legend">
     <div class="item"><span class="sw blue"></span>基础产品收入</div>
     <div class="item"><span class="sw green"></span>AI 产品收入</div>
@@ -194,7 +221,7 @@
 
 <h4>1.1.2 2026 年金融收入目标：<b style="color:#c0392b;">5,798 万元</b></h4>
 
-<h3>1.2 目标调整说明（为什么从 5,798 → 5,298 → 5,000）</h3>
+<h3>1.2 目标调整说明（为什么从 5,798 → 5,298 → 5,198）</h3>
 <div class="strategy">
 销售老大要求——目标调整的逻辑必须自己讲清楚，不要让 CEO 自己琢磨。
 </div>
@@ -202,7 +229,7 @@
   <tr><th>版本</th><th>目标</th><th>调整逻辑</th></tr>
   <tr><td>第一版 V1</td><td><b>5,798 万元</b></td><td>基于三年规划原版</td></tr>
   <tr><td>修订版 V2</td><td><b>5,298 万元</b></td><td>结构调整，去除部分为云原生</td></tr>
-  <tr><td>修订版 V3</td><td><b>5,000 万元</b></td><td>面对 AI 市场快速变化、龙虾冲击、产品形态迭代后的现实调整</td></tr>
+  <tr><td>修订版 V3</td><td><b>5,198 万元</b></td><td>面对 AI 市场快速变化、龙虾冲击、产品形态迭代后的现实调整</td></tr>
 </table>
 
 <h3>1.3 目标达成情况</h3>
@@ -673,19 +700,28 @@
   <tr><td>三球都亮还没拿下</td><td><b>组织协同 / 执行力</b>问题</td><td>—</td><td>第十章管理层协调</td></tr>
 </table>
 
-<h3>7.2 "商机点亮工程"用数据说话</h3>
+<h3>7.2 "商机点亮专项行动"用数据说话</h3>
 <div class="pitfall">
 销售老大严厉批评——"启动了双星点亮工程"<b>这种说法等于废话</b>。本章必须给出过程数据。
 </div>
+
+<table style="max-width:680px;">
+  <tr><th>大模型安全围栏商机</th><th>商机数</th></tr>
+  <tr><td>商机点亮专项行动<b>之前</b>（4 月 10 日）</td><td><b style="color:#666;">38 个商机</b></td></tr>
+  <tr><td>商机点亮专项行动<b>之后</b>（5 月 29 日）</td><td><b style="color:#1a7f37;">73 个商机（↑ 92%）</b></td></tr>
+</table>
+
+<h4>重点说明</h4>
 <ul>
-  <li>累计点亮客户数（含分布：业务部门 vs IT 部门 / 行业细分）</li>
-  <li>周新增速度趋势图</li>
-  <li>已安排行解一线拜访的 AI 商机数：39 个（截至 5 月）</li>
-  <li>从"点亮" → "实质推进" 的转化率</li>
+  <li>专项行动启动 <b>49 天</b>新增有效商机 35 个，几乎翻倍</li>
+  <li>客户结构（业务部门 vs IT 部门 / 行业细分占位）</li>
+  <li>从"点亮" → "实质推进" 转化率（占位）</li>
 </ul>
 
 <!-- =================== 第八章 =================== -->
 <h2>第八章　解决方案是否成立 & 可复制性（10 分钟）</h2>
+
+<h3>8.1 行解岗位价值</h3>
 
 <style>
 .sd-host * { box-sizing: border-box; }
@@ -848,7 +884,7 @@
 </div>
 
 <div class="framework" style="margin-top: 20px;">
-<h3 style="margin-top:0;color:#b03129;">🎯 行解的三大定位职责（由此盘推导）</h3>
+<h3 style="margin-top:0;color:#b03129;">🎯 行解的三大定位职责</h3>
 <ol>
   <li><b>整合</b>：把多产品打包成行业方案，向客户呈现一个完整网易 AI</li>
   <li><b>转化</b>：把"探索性需求"识别、共创、转化为"刚需"</li>
@@ -856,7 +892,7 @@
 </ol>
 </div>
 
-<h3>8.1 跨产品线行业方案视角——已验证有效</h3>
+<h3>8.2 跨产品线行业方案视角——已验证有效</h3>
 <p style="background:#f6f8fa;padding:14px 18px;border-left:4px solid #1f6feb;border-radius:4px;font-size:14px;line-height:1.8;">
 行业解决方案视角的有效性已被验证，是金融行业线最重要的方法论沉淀，通过整体展现网易 AI 能力，<b>一方面强化了品牌用户心智</b>，<b>另一方面引入了大量跨产品线的商机</b>。例如：<b>中原银行</b>，1 次拜访 → 3 条商机 → 第二周启动 POC。
 </p>
@@ -1078,7 +1114,7 @@
 <div class="note">注：1) 标签为「03商机」的记录计入统计；标签为「01线索」共 128 条，未计入。<br>2) 产品列中含逗号的项表示该商机涉及多个产品，按原始填写保留。</div>
 </div>
 
-<h3>8.2 金融行业解决方案框架（V1 → V2 → V3 售卖逻辑演进）</h3>
+<h3>8.3 金融行业解决方案框架（V1 → V2 → V3 售卖逻辑演进）</h3>
 
 <style>
 .nip-host { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 24px 28px 28px; margin: 16px 0; }
@@ -1108,7 +1144,7 @@
 .nip-base .c { background: #f5f5f5; padding: 8px; border-radius: 3px; text-align: center; font-size: 12px; color: #333; }
 </style>
 
-<h4>8.2.0 网易智企 AI 使能平台：让 AI 像资深业务专家一样思考与执行（总体框架）</h4>
+<h4>8.3.1 网易智企 AI 使能平台：让 AI 像资深业务专家一样思考与执行（总体框架）</h4>
 <div class="nip-host">
   <div class="nip-header">
     <div class="nip-title">网易智企AI使能平台：让AI像资深业务专家一样思考与执行</div>
@@ -1229,7 +1265,7 @@
 .stair-host .timeline-note { font-size: 11px; color: #d63031; font-weight: 600; }
 </style>
 
-<h4>8.2.1 V1 版本售卖逻辑——五大产品（大模型安全围栏、AI 网关、知数、销售 Agent、AI 知识库）</h4>
+<h4>8.3.2 V1 版本售卖逻辑——五大产品（大模型安全围栏、AI 网关、知数、销售 Agent、AI 知识库）</h4>
 <div class="strategy">
 策略来源：山东农信、河南农商行、中粮信托、大家保险、中弘人寿等客户拜访；以行业方案视角整合呈现网易 AI 能力。
 </div>
@@ -1274,7 +1310,7 @@
   <div class="timeline-start" style="margin-top:14px;">2025年1月</div>
 </div>
 
-<h4>8.2.2 V2 版本售卖逻辑——帝王蟹探索 + 五大产品</h4>
+<h4>8.3.3 V2 版本售卖逻辑——帝王蟹探索 + 五大产品</h4>
 <div class="strategy">
 策略来源：浙商证券、大连银行、天津银行等客户拜访反馈；引入"具有 cloud 特性的 Agent"探索方向。
 </div>
@@ -1361,7 +1397,7 @@
 .evol-host .route { font-style: italic; font-size: 12px; color: #d63031; margin-left: auto; }
 </style>
 
-<h4>8.2.3 V3 版本售卖逻辑——知数、指标平台、EasyCopilot、大模型安全围栏、AI 网关、企微聚合营销、销售 Agent、AI 知识库</h4>
+<h4>8.3.4 V3 版本售卖逻辑——知数、指标平台、EasyCopilot、大模型安全围栏、AI 网关、企微聚合营销增长、销售 Agent、AI 知识库</h4>
 <div class="strategy">
 策略来源：恒丰、杭州、中信、威海等客户后续推进反馈；引入"模型平权 → 能力技能化"演进框架，明确从项目级走向企业级。
 </div>
@@ -1440,11 +1476,16 @@
   </div>
 </div>
 
-<h3>8.3 私有化部署趋势——用"客户观察"的口吻</h3>
-<div class="pitfall">
-销售老大反复强调——<b>因果不能颠倒</b>。不能说"我们认为客户应该用私有化"，要说："从过去半年的客户交流中，我们观察到客户的建设节奏是 智能问答 → 技能建设 → 数字员工，这些实践<b>最终都指向</b>了私有化部署。"<br><br>
-<b>这是一个观察，不是销售单方面的决策</b>。一旦确认会引发产品支撑、历史包袱、交付动作的连锁问题，需大家共同讨论决定。
+<h4>8.3.5 三条 AI 建设主线</h4>
+<div class="strategy">
+基于 V3 售卖逻辑，金融行业 AI 建设可拆解为三条相互支撑的主线——每条主线对应一类"刚需 / 探索"组合，便于销售按客户成熟度选择切入点。
 </div>
+<table>
+  <tr><th>主线</th><th>定位</th><th>核心产品组合</th><th>典型场景 / 客户</th></tr>
+  <tr><td><b>主线一　数据智能</b></td><td>从数据到决策</td><td>知数 + 指标平台 + EasyCopilot + 数据中台</td><td>支行长经营、智能问数、投顾辅助</td></tr>
+  <tr><td><b>主线二　Agent 应用</b></td><td>从能力到场景</td><td>销售 Agent + AI 知识库 + 企微聚合营销增长 + 智能体开发平台</td><td>客户经理助手、合规问答、智能营销</td></tr>
+  <tr><td><b>主线三　AI 基础设施 & 安全</b></td><td>从合规到规模化</td><td>大模型安全围栏 + AI 网关 + Skill 标准化</td><td>金融机构合规底座、多模型统一接入</td></tr>
+</table>
 
 <h3>8.4 恒丰"支行长一天"能否复制？</h3>
 <table>
@@ -1462,6 +1503,12 @@
   <tr><td>深入技术交流</td><td>—</td><td>✅</td><td>✅</td></tr>
 </table>
 <div class="strategy">目标：让销售讲清楚<b>方案价值</b>（不是产品演示——后者交给行解和产解）。配套销售赋能计划表。</div>
+
+<h3>8.6 已经成功将金融行业最佳实践复制到大数据销售线（央国企、制造业等）</h3>
+<ul>
+  <li>已安排过行解去现场拜访的商机 <b>39 个</b>，同时还有大量销售初步建联的商机</li>
+  <li>重点项目包括：<b>德邦物流、欣旺达</b> 等客户</li>
+</ul>
 
 <!-- =================== 第九章 =================== -->
 <h2>第九章　下半年聚焦方向与运营机制（10 分钟）</h2>
@@ -1502,7 +1549,7 @@
 <h3>10.1 战略决策（请 CEO 拍板）</h3>
 <ul>
   <li>探索方向资源分配：路径 A（能力出发）vs 路径 B（覆盖出发）的优先级</li>
-  <li>私有化部署作为公司级方向是否确认（呼应 8.3）</li>
+  <li>私有化部署作为公司级方向是否确认（从过去半年的客户交流中，观察到"智能问答 → 技能建设 → 数字员工"实践最终都指向私有化部署）</li>
   <li>各产品线 vs 金融行业线在"探索性收入"上是否解绑承诺</li>
 </ul>
 
