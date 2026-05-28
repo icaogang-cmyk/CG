@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>金融行业线半年复盘汇报 V1 - 叙事结构与大纲</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 1100px; margin: 32px auto; padding: 0 28px; color: #1f2328; line-height: 1.7; background: #fafbfc; }
+  h1 { font-size: 26px; border-bottom: 3px solid #1f6feb; padding-bottom: 10px; }
+  h2 { font-size: 20px; color: #1f6feb; margin-top: 36px; padding: 10px 14px; background: linear-gradient(90deg, #eef4ff 0%, #fafbfc 100%); border-left: 4px solid #1f6feb; }
+  h3 { font-size: 16px; color: #24292f; margin-top: 22px; border-bottom: 1px dashed #d0d7de; padding-bottom: 4px; }
+  h4 { font-size: 14px; color: #57606a; margin: 14px 0 6px; }
+  .meta { background: #fff8c5; border: 1px solid #eac54f; padding: 14px 18px; border-radius: 6px; margin: 14px 0; font-size: 14px; }
+  .strategy { background: #ddf4ff; border-left: 4px solid #0969da; padding: 10px 14px; margin: 10px 0; border-radius: 4px; font-size: 14px; }
+  .strategy::before { content: "📌 叙事策略："; font-weight: bold; color: #0969da; }
+  .pitfall { background: #ffebe9; border-left: 4px solid #cf222e; padding: 10px 14px; margin: 10px 0; border-radius: 4px; font-size: 14px; }
+  .pitfall::before { content: "⚠️ 避坑点："; font-weight: bold; color: #cf222e; }
+  .new { background: #dafbe1; border-left: 4px solid #1a7f37; padding: 10px 14px; margin: 10px 0; border-radius: 4px; font-size: 14px; }
+  .new::before { content: "🆕 本次会议新增："; font-weight: bold; color: #1a7f37; }
+  .source { color: #6e7781; font-size: 12px; font-style: italic; }
+  ul { margin: 6px 0; padding-left: 24px; }
+  li { margin: 4px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #d0d7de; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; }
+  .toc { background: #f6f8fa; border: 1px solid #d0d7de; padding: 16px 24px; border-radius: 6px; }
+  .toc ol { margin: 6px 0; }
+  .framework { background: linear-gradient(135deg, #f5f7ff 0%, #fff5f5 100%); border: 2px solid #1f6feb; border-radius: 8px; padding: 18px 22px; margin: 16px 0; }
+  .framework h4 { margin-top: 8px; color: #1f6feb; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; margin-right: 6px; font-weight: bold; }
+  .pill-gang { background: #cfe9ff; color: #0a4595; }
+  .pill-tan { background: #ffe4cc; color: #8a4a00; }
+  .pill-ball { background: #1f6feb; color: white; }
+  .quote { background: #f6f8fa; border-left: 3px solid #8c959f; padding: 8px 14px; margin: 8px 0; font-style: italic; color: #424a53; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<h1>金融行业线半年工作复盘汇报 V1 —— 叙事结构与大纲</h1>
+<div class="meta">
+<b>汇报对象：</b>CEO 及各产品线高管　|　<b>建议时长：</b>45 分钟 + 25 分钟讨论<br>
+<b>核心命题：</b>金融行业 AI 机会现状如何？我们是否已经找到可复制的策略打法？卡点在哪？下半年怎么打？<br>
+<b>本次汇报最重要的一句话结论：</b>金融行业线的核心价值是—— <b>把"探索性需求"识别、转化为"刚需"，并横向复制</b>。半年来已经看清地图、跑出方法论、找到 1 个可复制方向（大模型安全围栏），下半年目标是再找到 2 个。
+</div>
+
+<!-- =================== 分析框架 =================== -->
+<div class="framework">
+<h3 style="margin-top:0;color:#1f6feb;">🎯 全篇统一分析框架：战略机会盘 · Strategic Opportunity Board</h3>
+<p>所有章节都用这一张盘"装"内容、回答问题。不再让 CEO 跟着我们的报告"散着走"。</p>
+<h4>三个球（一个客户/项目/产品是否值得做）</h4>
+<ul>
+  <li><span class="pill pill-ball">球 ①</span> <b>客户需求</b>——是不是真问题（付费意愿、决策权、紧迫感）</li>
+  <li><span class="pill pill-ball">球 ②</span> <b>产品满足</b>——我们能不能做（方案成熟度、差异化、可交付）</li>
+  <li><span class="pill pill-ball">球 ③</span> <b>销售覆盖</b>——我们够不够得到（渠道、关键人、签单转化）</li>
+</ul>
+<h4>两条腿（战略分层）</h4>
+<ul>
+  <li><span class="pill pill-gang">刚需区</span> 现在收割区 —— 三力共振、已成熟客户、当下要拿下 → <b>标准化、规模化、提效降本</b></li>
+  <li><span class="pill pill-tan">探索区</span> 未来布局区 —— 三力初见、培育型客户、未来要押注 → <b>定制化、灯塔客户、共创验证</b></li>
+</ul>
+<h4>一个内核</h4>
+<ul>
+  <li>🎯 <b>战略机会点 = 三力共振</b>；🔥 <b>组织执行力 = 引擎</b>——没有执行力，再好的交集也只是 PPT。</li>
+</ul>
+<h4>金融行业线的三大定位职责（由此盘推导）</h4>
+<ol>
+  <li><b>整合</b>：把多产品打包成行业方案，向客户呈现一个完整网易 AI</li>
+  <li><b>转化</b>：把"探索性需求"识别、共创、转化为"刚需"</li>
+  <li><b>复制</b>：找到 PMF 后横向复制到更多客户，形成规模化收入</li>
+</ol>
+</div>
+
+<div class="toc">
+<b>目录</b>
+<ol>
+  <li>开场　定调子：必要且充分 + 喜忧参半</li>
+  <li>第一章　目标回顾与半年结果</li>
+  <li>第二章　引入"战略机会盘"——理解金融行业线在做什么</li>
+  <li>第三章　机会真实性：钱在不在？需求在不在？</li>
+  <li>第四章　我们能不能拿到？双维度自检（产品 × 覆盖）</li>
+  <li>第五章　目标差距与产品线在战略盘中的落位</li>
+  <li>第六章　客户与商机事实（成功/失败 + 重点项目两张清单）</li>
+  <li>第七章　差距归因——"三球两腿"模型</li>
+  <li>第八章　解决方案是否成立 & 可复制性</li>
+  <li>第九章　下半年聚焦方向与运营机制</li>
+  <li>第十章　管理层需协调与决策事项</li>
+</ol>
+</div>
+
+<!-- =================== 开场 =================== -->
+<h2>开场（3–5 分钟）　定调子：必要且充分 + 喜忧参半</h2>
+<div class="new">
+本次会议明确——开场必须用<b>两句话</b>把全场调子定下来，避免后续被各种细节问题带散。
+</div>
+
+<h3>0.1 第一句话：金融行业线成立<b>必要且充分</b>，正当时</h3>
+<ul>
+  <li>必要：AI 转型大背景下，公司需要一支看清金融客户全貌的力量。不成立，永远只能跟着别人屁股后面吃剩饭，看不到客户真正的优先级。</li>
+  <li>充分：半年实践已证明，跨产品线行业方案视角的拜访是有效的（中原银行案例：1 次拜访带出 3 条商机）。</li>
+</ul>
+
+<h3>0.2 第二句话：半年成绩<b>喜忧参半</b></h3>
+<table>
+  <tr><th>喜（3 条）</th><th>忧（3 条）</th></tr>
+  <tr><td>① 跑通了"以行业方案打开，带出跨产品线商机"的打法</td><td>① 部分产品收入达不到三年规划目标（数帆-知数最突出）</td></tr>
+  <tr><td>② 找到 1 个可规模化复制的刚需场景（大模型安全围栏）</td><td>② 部分产品力存在缺口（云商知识库、AI 网关）</td></tr>
+  <tr><td>③ 商机池在变厚、团队在变好（兜底数据）</td><td>③ 跨产品线协同仍依赖行解/销售个人拉通</td></tr>
+</table>
+
+<h3>0.3 兜底说明：团队仍在"造船 + 换零件"</h3>
+<ul>
+  <li>团队成立 5 个月，3 进 3 出，2 个新人即将入职——汰换从第一天起就在进行</li>
+  <li>这是后面所有问题分析的现实基础</li>
+</ul>
+
+<!-- =================== 第一章 =================== -->
+<h2>第一章　目标回顾与半年结果（8 分钟）</h2>
+
+<h3>1.1 三年规划目标重温</h3>
+<ul>
+  <li>2026 年金融行业线收入目标：<b>5798 万</b>（含其他团队在金融的 2138 万存量）</li>
+  <li>三年规划：第一年 / 第二年 / 第三年 收入预测（占位）</li>
+</ul>
+
+<h3>1.2 目标调整说明（为什么从 5798 → 5198 → 1500+）</h3>
+<div class="strategy">
+销售老大要求——目标调整的逻辑必须自己讲清楚，不要让 CEO 自己琢磨。
+</div>
+<ul>
+  <li>V1（年初）：5798 万 —— 基于三年规划原版</li>
+  <li>V2（中调）：5198 万 —— 把云原生肉出去给老关，结构调整</li>
+  <li>V3（最新 3.27）：1500+ 万 —— 面对 AI 市场快速变化、龙虾冲击、产品形态迭代后的现实调整</li>
+  <li>调整背后的根本原因：当时定预算基于"知数等产品稳定售卖"假设，但 AI 市场和产品迭代速度超出预期</li>
+</ul>
+
+<h3>1.3 半年实际成绩（三张表 + 一句话总结）</h3>
+<table>
+  <tr><th>表</th><th>口径</th><th>对比基准</th></tr>
+  <tr><td>表 1 客户触达地图</td><td>按银行/证券/保险/信托细分</td><td>三年规划客户结构</td></tr>
+  <tr><td>表 2 销售漏斗</td><td>商机—POC—签约—确收（不重转化率，重实质推进）</td><td>—</td></tr>
+  <tr><td>表 3 收入对比</td><td>各产品线合同额 & 确收预测</td><td>三年规划数字</td></tr>
+</table>
+<div class="strategy">
+半年结果一句话总结：<b>机会真实存在、漏斗在变厚，但 Q2 确收节奏低于预期，原因下一章展开。</b>
+</div>
+
+<!-- =================== 第二章 =================== -->
+<h2>第二章　引入"战略机会盘"——理解金融行业线在做什么（5 分钟）</h2>
+<div class="new">
+本章是 V1 版本的<b>核心新增</b>。先把分析框架立住，后面所有问题都装到这张盘里回答，避免老板和我们各说各话。
+</div>
+
+<h3>2.1 三个球的定义（每个圈给一个客观判断标准）</h3>
+<div class="pitfall">
+销售老大强调——每个圈我们必须给出<b>客观定义</b>，不能用主观判断。这样老板问"为什么这是真需求"时，我们不用辩论，直接套标准。
+</div>
+<table>
+  <tr><th>圈</th><th>客观判断标准（参考 PMF 思路）</th></tr>
+  <tr><td>客户需求</td><td>"如果明天这个服务停用了，你会多难受" —— 至少 8 分以上才算真需求；含付费意愿、决策权、紧迫感三要素</td></tr>
+  <tr><td>产品满足</td><td>方案成熟度（POC 跑通）+ 差异化（不被竞品平替）+ 可交付（不依赖个例资源）</td></tr>
+  <tr><td>销售覆盖</td><td>能否触达决策人（业务还是 IT）+ 签单转化能力</td></tr>
+</table>
+
+<h3>2.2 两条腿（刚需 vs 探索）的战略分层</h3>
+<ul>
+  <li><span class="pill pill-gang">刚需</span>：三力共振已成立，下半年目标是<b>大规模收割</b>（如大模型安全围栏）</li>
+  <li><span class="pill pill-tan">探索</span>：三力初见，下半年目标是<b>共创验证、转化 1–2 个为刚需</b>（如知数、企微聚合、AI 网关）</li>
+</ul>
+
+<h3>2.3 战略机会盘 × 金融行业线的核心三件事</h3>
+<ul>
+  <li><b>整合</b>多产品，向客户呈现完整 AI 能力（解决"客户不知道网易有什么"的问题）</li>
+  <li><b>转化</b>探索性需求 → 刚需（解决"客户不知道自己要什么"的问题）</li>
+  <li><b>复制</b>刚需横向规模化（解决"一单是个例还是模式"的问题）</li>
+</ul>
+
+<!-- =================== 第三章 =================== -->
+<h2>第三章　机会真实性：钱在不在？需求在不在？（10 分钟）</h2>
+
+<h3>3.1 钱在不在——真预算的客观证据</h3>
+<table>
+  <tr><th>证据等级</th><th>判断逻辑</th><th>举例</th></tr>
+  <tr><td>已签约</td><td>预算已落袋</td><td>恒丰、…</td></tr>
+  <tr><td>POC 中</td><td>客户已立项，预算已分配（如大模型安全围栏 POC 中商机 1350 万）</td><td>浙江农商联、湘财、光大…</td></tr>
+  <tr><td>已立项 / 招采</td><td>预算审批通过，进入采购流程</td><td>威海银行（我们因无 SaaS 报不了名）</td></tr>
+  <tr><td>公开招投标</td><td>2024–2026.3 Agent/客服/知识库中标信息</td><td>附录 D 列表</td></tr>
+  <tr><td>客户主动给方案</td><td>有预算但我们暂时做不了</td><td>中信银行知识库、天津银行</td></tr>
+</table>
+
+<h3>3.2 需求在不在——区分"刚需"与"探索性需求"</h3>
+<div class="new">
+本次会议明确——我们要把所有在跟的产品 / 场景明确归类到"刚需"或"探索"，不能含混。这是金融行业线最重要的一次"识别动作"。
+</div>
+<table>
+  <tr><th>产品 / 场景</th><th>归类</th><th>归类依据（PMF 八分法）</th></tr>
+  <tr><td>大模型安全围栏</td><td><span class="pill pill-gang">刚需</span></td><td>多个 POC 跑通、客户离不开、已有规模化签单证据</td></tr>
+  <tr><td>数据中台升级（含 AI 化）</td><td><span class="pill pill-gang">刚需</span></td><td>客户既有架构升级路径</td></tr>
+  <tr><td>云原生（重点大客户）</td><td><span class="pill pill-gang">刚需</span></td><td>—</td></tr>
+  <tr><td>知数（单产品）</td><td><span class="pill pill-tan">探索</span></td><td>客户兴趣点漂移，价值感单点突破难</td></tr>
+  <tr><td>指标平台</td><td><span class="pill pill-gang">刚需</span>（候选）</td><td>客户兴趣从知数转向指标平台</td></tr>
+  <tr><td>EasyCopilot（统一 Agent 入口）</td><td><span class="pill pill-tan">探索</span></td><td>新形态，需共创验证</td></tr>
+  <tr><td>知识工程 / 知识库</td><td><span class="pill pill-tan">探索</span></td><td>产品力缺口 50% 项目卡点</td></tr>
+  <tr><td>企微聚合营销</td><td><span class="pill pill-tan">探索</span></td><td>方案匹配度待验证</td></tr>
+  <tr><td>销售 Agent</td><td><span class="pill pill-tan">探索</span></td><td>受金融营销政策影响</td></tr>
+  <tr><td>AI 网关</td><td><span class="pill pill-tan">探索</span></td><td>产品力较弱，捆绑销售模式跑通中</td></tr>
+  <tr><td>具有 cloud 特性的 Agent（不点名）</td><td><span class="pill pill-tan">探索</span></td><td>对标 Databuilder/Databody 形态</td></tr>
+</table>
+<div class="strategy">
+凡是被归到"探索"的产品/场景，在收入承诺上要<b>解绑</b>——不能让销售背着探索的目标硬卖。下半年承诺由"行业线 + 产线"共担。
+</div>
+
+<!-- =================== 第四章 =================== -->
+<h2>第四章　我们能不能拿到？双维度自检（10 分钟）</h2>
+<div class="pitfall">
+销售老大原话——回答"我们能不能拿到"，必须拆成 <b>产品匹配度 × 销售覆盖能力</b> 两个维度。不能停留在"市场有项目、有 IT 预算"的表面数据上。
+</div>
+
+<h3>4.1 刚需区（现在没拿到的 → 未来怎么拿）</h3>
+<table>
+  <tr><th>刚需产品</th><th>产品匹配度</th><th>销售覆盖</th><th>没拿到的原因</th><th>下半年怎么拿</th></tr>
+  <tr><td>大模型安全围栏</td><td>高</td><td>中</td><td>覆盖深度不够、客情待加强</td><td>商机点亮工程 + 关键商机重兵突破</td></tr>
+  <tr><td>指标平台</td><td>高</td><td>中</td><td>从知数转推过程中，销售话术待统一</td><td>新客户主推；老客户用"知数+指标+EasyCopilot"组合</td></tr>
+  <tr><td>数据中台升级</td><td>高</td><td>高</td><td>—</td><td>把升级费按比例归 AI（参考其他行业线打法）</td></tr>
+</table>
+
+<h3>4.2 探索区（怎么转刚需）</h3>
+<div class="strategy">
+转化路径有<b>两条腿</b>，老板需要决策走哪条：
+<ul>
+<li><b>路径 A · 基于能力出发</b>：我能干什么，就把它做深做细（如知数 → 把数据中台之上的 AI 能力做透）</li>
+<li><b>路径 B · 基于覆盖出发</b>：客户有什么虚需求/失成需求，我去开发产品来接（如知识库 → 但前提要看自己能否做出标杆产品）</li>
+</ul>
+</div>
+
+<h3>4.3 拿不到原因的两类分析（只看刚需，探索不计入）</h3>
+<table>
+  <tr><th>类型</th><th>定义</th><th>下半年动作</th></tr>
+  <tr><td>① 有需求、销售能覆盖、产品支持不够</td><td>产品力问题</td><td>产线提需求清单，行业线协调</td></tr>
+  <tr><td>② 有需求、产品能支持、销售没覆盖到</td><td>销售覆盖问题</td><td>销售汰换 + 商机点亮 + 行解陪跑</td></tr>
+  <tr><td>③ 三个圈都满足还没拿下</td><td>组织协同 / 执行力问题</td><td>第十章管理层协调</td></tr>
+</table>
+
+<!-- =================== 第五章 =================== -->
+<h2>第五章　目标差距与产品线在战略盘中的落位（5 分钟）</h2>
+<div class="pitfall">
+销售老大明确——<b>不要给产品线打"高/中/低/可控"的评价标签</b>，那些都说烂了。把产品落到战略机会盘的相应象限就够了，"在哪里"比"评得多好"重要。
+</div>
+
+<h3>5.1 整体目标完成率与节奏</h3>
+<ul>
+  <li>金融组完成率：占位</li>
+  <li>Q2 / Q3 / Q4 中标—签约—确收节奏</li>
+  <li>高风险项目清单 + 高账龄回款</li>
+</ul>
+
+<h3>5.2 各产品线在战略机会盘的落位</h3>
+<table>
+  <tr><th>产品线</th><th>刚需区落位</th><th>探索区落位</th><th>下半年主线</th></tr>
+  <tr><td>易盾（大模型安全围栏）</td><td>✅ 已三力共振</td><td>—</td><td>规模化收割</td></tr>
+  <tr><td>数帆</td><td>指标平台（候选）、数据中台升级</td><td>知数、EasyCopilot</td><td>新老客户分流；探索转化</td></tr>
+  <tr><td>云信 - 云原生</td><td>有预算重点大客户</td><td>—</td><td>守住存量</td></tr>
+  <tr><td>云信 - RTC</td><td>—</td><td>—</td><td><b>不再主动铺开</b>，只抓明确大项目</td></tr>
+  <tr><td>云信 - AI 网关</td><td>—</td><td>捆绑安全围栏 + 帝王蟹能力解耦</td><td>探索路径 B</td></tr>
+  <tr><td>云商</td><td>大象智能客服存量</td><td>知识库、企微合规、销售 Agent</td><td>双路径打法（见 5.3）</td></tr>
+</table>
+
+<h3>5.3 双路径打法示例：以云商为例</h3>
+<div class="new">
+本次会议形成的<b>方法论模板</b>——每个有缺口的产品线都按这个双路径补差距。
+</div>
+<table>
+  <tr><th>路径</th><th>说明</th><th>负责</th></tr>
+  <tr><td>路径一 · 现实路径</td><td>现有产品 + 销售力，找个性化客户，能卖什么卖什么</td><td>销售为主 + 产解配合（无行解参与）</td></tr>
+  <tr><td>路径二 · 探索路径</td><td>找到 1 个 PMF 突破单做样板，项目制运营复制</td><td>行解主导 + 产解 + 运营 + 销售</td></tr>
+</table>
+
+<!-- =================== 第六章 =================== -->
+<h2>第六章　客户与商机事实（12 分钟）</h2>
+
+<h3>6.1 表一：成功 / 失败案例（10 个，各一句话）</h3>
+<div class="strategy">
+案例选择遵循销售老大三原则：<br>
+① 成功案例突出<b>"交叉销售"</b>（中原、国投做主角，恒丰做数据支撑）<br>
+② 失败案例只选<b>"本可以赢但丢了"</b>的（杭州银行 POC 高分但价格丢单）<br>
+③ <b>"上不了桌"</b>的不复盘（国开行 3000 万——讯飞 vs 阿里，不值得讲）
+</div>
+<table>
+  <tr><th>#</th><th>客户</th><th>类型</th><th>一句话结论</th></tr>
+  <tr><td>1</td><td>中原银行</td><td>✅ 成功 · 交叉销售样板</td><td>1 次拜访带出 3 条商机，第二周启动 POC</td></tr>
+  <tr><td>2</td><td>国投证券</td><td>✅ 成功 · 交叉销售</td><td>—</td></tr>
+  <tr><td>3</td><td>中粮信托</td><td>✅ 成功 · 多产品</td><td>—</td></tr>
+  <tr><td>4</td><td>恒丰银行</td><td>✅ 成功 · 数据支撑（不做主角）</td><td>已验证多产品同步推进；反哺 V2 EasyAgent</td></tr>
+  <tr><td>5</td><td>（待补）</td><td>✅ 成功</td><td>—</td></tr>
+  <tr><td>6</td><td>杭州银行</td><td>❌ 失败 · 重点讲</td><td>POC 高分丢百度，价格因素 —— 本可以赢</td></tr>
+  <tr><td>7</td><td>中信银行知识库</td><td>❌ 失败 · 一笔带过</td><td>产品力不支持，无深入价值</td></tr>
+  <tr><td>8</td><td>国开行</td><td>❌ 不复盘</td><td>"上不了桌"项目，讯飞 vs 阿里</td></tr>
+  <tr><td>9</td><td>（待补）</td><td>❌</td><td>—</td></tr>
+  <tr><td>10</td><td>（待补）</td><td>❌</td><td>—</td></tr>
+</table>
+
+<h3>6.2 表二：刚需重点项目清单（下半年要拿下）</h3>
+<table>
+  <tr><th>客户</th><th>主推</th><th>当前阶段</th><th>金额</th><th>下一步</th><th>需要支持</th></tr>
+  <tr><td>浙江农商联合银行</td><td colspan="5">大模型安全围栏</td></tr>
+  <tr><td>湘财证券 / 光大 / 中原 / 太平洋 / 恒丰 / 建设 / 浙商证券</td><td colspan="5">大模型安全围栏</td></tr>
+</table>
+
+<h3>6.3 表三：探索型重点项目清单（下半年要验证 PMF）</h3>
+<table>
+  <tr><th>客户</th><th>探索方向</th><th>验证目标</th><th>行解主责</th></tr>
+  <tr><td>—</td><td>指标平台 + 知数组合</td><td>能否成为刚需</td><td>—</td></tr>
+  <tr><td>—</td><td>企微聚合营销</td><td>方案匹配度</td><td>—</td></tr>
+  <tr><td>—</td><td>具有 cloud 特性的 Agent</td><td>客户接受度</td><td>—</td></tr>
+</table>
+<div class="strategy">
+不点"帝王蟹"的名字，只说"具有 cloud 特性的 Agent / 对标 Databuilder Databody 形态"——等客户主动问"这不就是帝王蟹吗"再确认。
+</div>
+
+<!-- =================== 第七章 =================== -->
+<h2>第七章　差距归因——"三球两腿"模型（5 分钟）</h2>
+<div class="new">
+用第二章立的"战略机会盘"反过来归因——不再用"客户周期/场景/产品/销售/组织/竞品"那种六维罗列。
+</div>
+
+<h3>7.1 卡点归因（每个掉单/卡单都映射回三个球）</h3>
+<table>
+  <tr><th>卡点类型</th><th>本质</th><th>典型案例</th><th>下半年应对</th></tr>
+  <tr><td>球 ① 不亮</td><td>选错了场景 / 客户没真痛</td><td>知数早期某些客户</td><td>停损，重新识别真需求</td></tr>
+  <tr><td>球 ② 不亮</td><td>产品力不足</td><td>云商知识库</td><td>产品补齐 or 放弃</td></tr>
+  <tr><td>球 ③ 不亮</td><td>销售覆盖不够</td><td>大模型安全围栏部分潜在客户</td><td>商机点亮 + 销售汰换</td></tr>
+  <tr><td>三球都亮还没拿下</td><td><b>组织协同 / 执行力</b>问题</td><td>—</td><td>第十章管理层协调</td></tr>
+</table>
+
+<h3>7.2 "商机点亮工程"用数据说话</h3>
+<div class="pitfall">
+销售老大严厉批评——"启动了双星点亮工程"<b>这种说法等于废话</b>。本章必须给出过程数据。
+</div>
+<ul>
+  <li>累计点亮客户数（含分布：业务部门 vs IT 部门 / 行业细分）</li>
+  <li>周新增速度趋势图</li>
+  <li>已安排行解一线拜访的 AI 商机数：39 个（截至 5 月）</li>
+  <li>从"点亮" → "实质推进" 的转化率</li>
+</ul>
+
+<!-- =================== 第八章 =================== -->
+<h2>第八章　解决方案是否成立 & 可复制性（10 分钟）</h2>
+
+<h3>8.1 跨产品线行业方案视角——已验证有效</h3>
+<ul>
+  <li>中原银行案例：1 次拜访 → 3 条商机 → 第二周 POC</li>
+  <li>同类实例多发</li>
+  <li>结论：行业解决方案视角的有效性已被验证，是金融行业线最重要的方法论沉淀</li>
+</ul>
+
+<h3>8.2 当前解决方案总体框架图（用颜色标记刚需 vs 探索）</h3>
+<div class="strategy">
+框架图上每个产品块用颜色标注 —— <span class="pill pill-gang">刚需</span> / <span class="pill pill-tan">探索</span>，让 CEO 一眼看到"我们花精力的地方对不对"。
+</div>
+
+<h3>8.3 私有化部署趋势——用"客户观察"的口吻</h3>
+<div class="pitfall">
+销售老大反复强调——<b>因果不能颠倒</b>。不能说"我们认为客户应该用私有化"，要说："从过去半年的客户交流中，我们观察到客户的建设节奏是 智能问答 → 技能建设 → 数字员工，这些实践<b>最终都指向</b>了私有化部署。"<br><br>
+<b>这是一个观察，不是销售单方面的决策</b>。一旦确认会引发产品支撑、历史包袱、交付动作的连锁问题，需大家共同讨论决定。
+</div>
+
+<h3>8.4 恒丰"支行长一天"能否复制？</h3>
+<table>
+  <tr><th>问题</th><th>回答</th></tr>
+  <tr><td>恒丰内部能否复制？</td><td>原合同限制 → 原产品不可能；已设计新路径：总行自上而下，用升级版/其他产品实现复制</td></tr>
+  <tr><td>其他银行能否复制？</td><td><b>"支行长一天"模式</b>难复制；<b>"销售宝"模式</b>能复制——证据客户：杭州、华夏杭州分行、无锡农商行（再补 1–2 家凑 3–5 家）</td></tr>
+</table>
+<div class="pitfall">不能给出"复制不了、机会为零"的消极结论。</div>
+
+<h3>8.5 销售能否独立讲清楚解决方案</h3>
+<table>
+  <tr><th>方案类型</th><th>销售独立讲</th><th>需行解</th><th>需产解站台</th></tr>
+  <tr><td>成熟产品（数据中台、大模型安全围栏）</td><td>✅</td><td>—</td><td>—</td></tr>
+  <tr><td>新产品价值（AI 网关 ROI）</td><td>—</td><td>✅</td><td>—</td></tr>
+  <tr><td>深入技术交流</td><td>—</td><td>✅</td><td>✅</td></tr>
+</table>
+<div class="strategy">目标：让销售讲清楚<b>方案价值</b>（不是产品演示——后者交给行解和产解）。配套销售赋能计划表。</div>
+
+<!-- =================== 第九章 =================== -->
+<h2>第九章　下半年聚焦方向与运营机制（10 分钟）</h2>
+<div class="new">
+本章是新版的<b>承诺收口章</b>——金融行业线下半年只背两件事：
+<ol>
+<li>三个收入指标（占位）</li>
+<li>找到 <b>2 个</b>可复制的"刚需"产品/场景</li>
+</ol>
+不背规模增长。对应公司"追求收入和利润健康、不追求规模增长"的大方针。
+</div>
+
+<h3>9.1 三大聚焦方向（每个方向都有刚需 + 探索两条腿）</h3>
+<table>
+  <tr><th>方向</th><th>刚需腿（收割）</th><th>探索腿（验证）</th><th>样板客户</th><th>需管理层协调</th></tr>
+  <tr><td>① 数据智能</td><td>指标平台 + 数据中台升级</td><td>知数、EasyCopilot</td><td>恒丰、中原</td><td>—</td></tr>
+  <tr><td>② 金融营销</td><td>—</td><td>企微聚合 + 销售 Agent + 知识工程</td><td>—</td><td>是否独立投入？</td></tr>
+  <tr><td>③ AI 基础设施</td><td>大模型安全围栏</td><td>AI 网关（解耦帝王蟹能力）</td><td>多家 POC</td><td>解耦优先级</td></tr>
+</table>
+
+<h3>9.2 月度洞察会机制（运营心跳）</h3>
+<ul>
+  <li>每月一场<b>行解主导</b>的"刚需场景洞察会"</li>
+  <li>输出：高质量客户画像 + 场景模拟 + PMF 判断</li>
+  <li>12 份月度洞察报告驱动一切（标杆、销售赋能、解决方案迭代）</li>
+  <li>年终对 CEO 汇报：今年验证了多少个解决方案、找到了几个刚需</li>
+</ul>
+
+<h3>9.3 双路径执行模板（每条产品线适用）</h3>
+<table>
+  <tr><th>路径</th><th>动作</th><th>主责</th><th>资源需求</th></tr>
+  <tr><td>路径一 · 现实收割</td><td>能力 + 销售覆盖 → 个性化客户</td><td>销售 + 产解</td><td>—</td></tr>
+  <tr><td>路径二 · 探索 PMF</td><td>找标杆突破 → 项目制运营 → 横向复制</td><td>行解主导 + 产解 + 运营</td><td>需公司给资源/拍板</td></tr>
+</table>
+
+<!-- =================== 第十章 =================== -->
+<h2>第十章　管理层需协调与决策事项（3–5 分钟）</h2>
+<h3>10.1 战略决策（请 CEO 拍板）</h3>
+<ul>
+  <li>探索方向资源分配：路径 A（能力出发）vs 路径 B（覆盖出发）的优先级</li>
+  <li>私有化部署作为公司级方向是否确认（呼应 8.3）</li>
+  <li>各产品线 vs 金融行业线在"探索性收入"上是否解绑承诺</li>
+</ul>
+
+<h3>10.2 跨产品线协调</h3>
+<ul>
+  <li>AI 网关 ← 帝王蟹能力解耦的优先级与时间表</li>
+  <li>云商知识库产品力补齐（图谱、个人门户）的投入决策</li>
+  <li>数据中台升级费的 AI 归属比例规则</li>
+</ul>
+
+<h3>10.3 资源诉求</h3>
+<ul>
+  <li>POC 人力（数帆瓶颈）</li>
+  <li>销售赋能资源（培训、ROI/竞品话术）</li>
+  <li>各产品线统一接口人机制</li>
+</ul>
+
+<!-- =================== 附录 =================== -->
+<h2>附录</h2>
+<ul>
+  <li>附录 A：客户触达地图明细</li>
+  <li>附录 B：销售漏斗与商机明细</li>
+  <li>附录 C：POC 项目清单（恒丰、杭州、长城人寿、中意人寿、东方证券）</li>
+  <li>附录 D：2024–2026.3 公开招投标中标信息</li>
+  <li>附录 E：解决方案框架图（含刚需/探索颜色标注）</li>
+  <li>附录 F：销售赋能计划表</li>
+  <li>附录 G：行解与产解协作 SOP V1</li>
+  <li>附录 H：PMF 八分法判断表（每个产品打分）</li>
+</ul>
+
+<!-- =================== V0 → V1 变更说明 =================== -->
+<h2>V0 → V1 变更说明（给团队看）</h2>
+<table>
+  <tr><th>变更项</th><th>V0</th><th>V1</th></tr>
+  <tr><td>分析框架</td><td>按 CEO 的 11 个问题平铺</td><td><b>引入"战略机会盘"作为统一框架</b>，所有章节都装到三球两腿一内核里</td></tr>
+  <tr><td>开场</td><td>团队现状兜底</td><td><b>必要且充分 + 喜忧参半</b> 两句话定调（来自本次会议要求）</td></tr>
+  <tr><td>目标章节</td><td>对照 12 月 kick-off</td><td>对照<b>三年规划</b>，且说明 V1→V2→V3 调整逻辑</td></tr>
+  <tr><td>机会真实性</td><td>双维度自检表</td><td>拆为"钱在不在"+ "需求在不在（PMF 8 分法）"两步</td></tr>
+  <tr><td>需求归类</td><td>—</td><td>所有产品/场景明确归类<b>刚需 / 探索</b>，探索类不背销售收入指标</td></tr>
+  <tr><td>差距归因</td><td>六维罗列（周期/场景/产品/销售/组织/竞品）</td><td>统一映射回<b>三个球 + 组织协同</b></td></tr>
+  <tr><td>风险评级</td><td>给产品线打高/中/低标签</td><td><b>去掉评级</b>，只落位到战略盘象限</td></tr>
+  <tr><td>下半年承诺</td><td>三大方向</td><td>三大方向 × 双路径执行模板 + <b>月度洞察会机制</b></td></tr>
+  <tr><td>核心承诺</td><td>规模增长</td><td><b>三个收入指标 + 找到 2 个可复制刚需</b>（不背规模）</td></tr>
+  <tr><td>案例选材</td><td>恒丰做主角</td><td>恒丰退到数据支撑位，<b>中原/国投做交叉销售主角</b></td></tr>
+  <tr><td>帝王蟹</td><td>明面提及</td><td><b>不点名</b>，只说"cloud 特性的 Agent"</td></tr>
+</table>
+
+<!-- =================== Checklist =================== -->
+<h2>汇报材料准备 Checklist</h2>
+<ol>
+  <li>用<b>战略机会盘</b>反复打磨主线逻辑，确保每章都能装到盘里</li>
+  <li>给每个产品/场景做<b>PMF 八分法打分</b>，作为刚需 vs 探索归类的客观证据</li>
+  <li>请未深度参与的同事（雨轩）做外部视角审视</li>
+  <li>用 Copilot <b>Code 模式</b>（非 Chat）做 AI 压力测试，模拟 CEO 提问</li>
+  <li>周末前完成迭代 → 周日最终碰头 → 周一汇报</li>
+</ol>
+
+</body>
+</html>
