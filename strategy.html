@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<title>行业解决方案专家 · 战略架构图</title>
+<title>战略机会盘 · Strategic Opportunity Board</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -11,56 +11,21 @@
     color: #1f2937;
     line-height: 1.6;
   }
-  .nav {
-    position: fixed;
-    top: 20px; right: 20px;
-    z-index: 100;
-    background: #ffffffd9;
-    backdrop-filter: blur(10px);
-    border-radius: 999px;
-    padding: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    display: flex; gap: 4px;
-  }
-  .nav a {
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 999px;
-    color: #4b5563;
-    font-size: 13px;
-    font-weight: 500;
-    transition: all .2s;
-  }
-  .nav a:hover { background: #eef2f7; color: #111827; }
-  .nav a.active { background: #1f2937; color: #fff; }
 
   .page {
     min-height: 100vh;
     padding: 60px 80px 80px;
     display: flex;
     flex-direction: column;
-    page-break-after: always;
-  }
-  .page:last-child { page-break-after: auto; }
-
-  /* Page 1 */
-  .page-1 {
     background:
-      radial-gradient(circle at 15% 10%, rgba(99,102,241,0.08), transparent 40%),
-      radial-gradient(circle at 85% 90%, rgba(16,185,129,0.08), transparent 40%),
-      #fafbfc;
-  }
-  .page-2 {
-    background:
-      radial-gradient(circle at 80% 15%, rgba(236,72,153,0.08), transparent 40%),
-      radial-gradient(circle at 20% 85%, rgba(245,158,11,0.08), transparent 40%),
+      linear-gradient(180deg, rgba(99,102,241,0.06) 0%, rgba(99,102,241,0.06) 48%, transparent 50%, transparent 52%, rgba(245,158,11,0.06) 54%, rgba(245,158,11,0.06) 100%),
       #fafbfc;
   }
 
   .header { margin-bottom: 30px; }
   .badge {
     display: inline-block;
-    background: #1f2937;
+    background: linear-gradient(135deg,#0f172a,#6366f1);
     color: #fff;
     font-size: 11px;
     letter-spacing: 2px;
@@ -68,7 +33,6 @@
     border-radius: 4px;
     margin-bottom: 14px;
   }
-  .badge.alt { background: linear-gradient(135deg, #ec4899, #f59e0b); }
   h1 {
     font-size: 32px;
     font-weight: 700;
@@ -131,81 +95,28 @@
   .legend-card p {
     color: #64748b; font-size: 13px; margin-left: 26px;
   }
-  .legend-card.core {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    border: none;
-  }
-  .legend-card.core h3, .legend-card.core p { color: #fff; }
-  .legend-card.core p { color: #cbd5e1; }
 
   .footnote {
     margin-top: 30px;
     padding: 20px 24px;
     background: #fff;
-    border-left: 4px solid #6366f1;
+    border-left: 4px solid #0f172a;
     border-radius: 8px;
     font-size: 13px;
     color: #475569;
   }
-  .footnote.alt { border-left-color: #ec4899; }
   .footnote b { color: #0f172a; }
 
-  /* Page 2 specific layout */
-  .page-2 .canvas {
-    grid-template-columns: 1.2fr 1fr;
-  }
-
-  .framework-meta {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 14px;
-  }
-  .meta-pill {
-    background: #fff;
-    border-radius: 10px;
-    padding: 14px 16px;
-    border: 1px solid #e5e7eb;
-  }
-  .meta-pill .num {
-    font-family: "SF Mono", Consolas, monospace;
-    font-size: 12px;
-    color: #ec4899;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-  }
-  .meta-pill .label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #0f172a;
-    margin-bottom: 4px;
-  }
-  .meta-pill .desc {
-    font-size: 12px;
-    color: #64748b;
-    line-height: 1.5;
-  }
-
   @media print {
-    .nav { display: none; }
     .page { padding: 40px; }
   }
 </style>
 </head>
 <body>
 
-<nav class="nav">
-  <a href="#page0" class="active" onclick="setActive(this)">合并版 · 战略机会盘</a>
-  <a href="#page1" onclick="setActive(this)">原稿 · 四维模型</a>
-  <a href="#page2" onclick="setActive(this)">PRISM · 新理论</a>
-</nav>
-
-<!-- ==================== PAGE 0 · SYNTHESIZED VERSION ==================== -->
-<section class="page" id="page0" style="background:
-    linear-gradient(180deg, rgba(99,102,241,0.06) 0%, rgba(99,102,241,0.06) 48%, transparent 50%, transparent 52%, rgba(245,158,11,0.06) 54%, rgba(245,158,11,0.06) 100%),
-    #fafbfc;">
+<section class="page" id="page0">
   <div class="header">
-    <span class="badge" style="background:linear-gradient(135deg,#0f172a,#6366f1);">PAGE 00 · 合并优化版</span>
+    <span class="badge">战略架构图 · 合并优化版</span>
     <h1>战略机会盘 · Strategic Opportunity Board</h1>
     <div class="subtitle">客户需求 × 产品满足 × 销售覆盖  +  刚需/探索 战略分层  +  组织执行力内核</div>
   </div>
@@ -239,20 +150,13 @@
             <stop offset="60%" stop-color="#dc2626"/>
             <stop offset="100%" stop-color="#7f1d1d"/>
           </radialGradient>
-          <radialGradient id="opportunityRing" cx="50%" cy="50%" r="50%">
-            <stop offset="60%" stop-color="#fff" stop-opacity="0"/>
-            <stop offset="100%" stop-color="#0f172a" stop-opacity="0.15"/>
-          </radialGradient>
         </defs>
 
-        <!-- Background zones -->
         <rect x="0" y="0" width="600" height="290" fill="url(#zoneTop)"/>
         <rect x="0" y="310" width="600" height="290" fill="url(#zoneBot)"/>
 
-        <!-- Horizontal axis line -->
         <line x1="40" y1="300" x2="560" y2="300" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
 
-        <!-- Zone labels (left side) -->
         <g>
           <rect x="25" y="155" width="60" height="26" rx="13" fill="#1e40af"/>
           <text x="55" y="173" text-anchor="middle" font-size="13" fill="#fff" font-weight="600" letter-spacing="2">刚需</text>
@@ -264,38 +168,31 @@
           <text x="55" y="460" text-anchor="middle" font-size="9" fill="#b45309" letter-spacing="1">未来布局区</text>
         </g>
 
-        <!-- Right side annotations -->
         <g>
           <text x="555" y="100" text-anchor="end" font-size="10" fill="#64748b" letter-spacing="1">▲ 高确定性 · 高客单成熟度</text>
           <text x="555" y="555" text-anchor="end" font-size="10" fill="#64748b" letter-spacing="1">▼ 低确定性 · 高增长想象力</text>
         </g>
 
-        <!-- 客户需求 circle (top, anchored in 刚需 zone but spans both) -->
         <circle cx="300" cy="225" r="140" fill="url(#cDemand)" mix-blend-mode="multiply"/>
         <text x="300" y="120" text-anchor="middle" font-size="20" font-weight="700" fill="#065f46">客户需求</text>
         <text x="300" y="138" text-anchor="middle" font-size="10" fill="#10b981" letter-spacing="2">CUSTOMER DEMAND</text>
 
-        <!-- 产品满足 circle (bottom-left) -->
         <circle cx="230" cy="355" r="140" fill="url(#cProduct)" mix-blend-mode="multiply"/>
         <text x="155" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#1e40af">产品满足</text>
         <text x="155" y="492" text-anchor="middle" font-size="10" fill="#3b82f6" letter-spacing="2">PRODUCT FIT</text>
 
-        <!-- 销售覆盖 circle (bottom-right) -->
         <circle cx="370" cy="355" r="140" fill="url(#cSales)" mix-blend-mode="multiply"/>
         <text x="445" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#854d0e">销售覆盖</text>
         <text x="445" y="492" text-anchor="middle" font-size="10" fill="#eab308" letter-spacing="2">SALES COVERAGE</text>
 
-        <!-- Outer ring: 战略机会点 (target opportunity) -->
         <ellipse cx="300" cy="305" rx="62" ry="78" fill="#fff" stroke="#0f172a" stroke-width="2.5" opacity="0.95"/>
         <text x="300" y="245" text-anchor="middle" font-size="10" fill="#0f172a" font-weight="600" letter-spacing="3">战略机会点</text>
 
-        <!-- Inner core: 组织执行力 (engine) -->
         <ellipse cx="300" cy="305" rx="36" ry="55" fill="url(#engineCore)"/>
         <text x="300" y="297" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">组织</text>
         <text x="300" y="312" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">执行力</text>
         <text x="300" y="327" text-anchor="middle" font-size="7" fill="#fee2e2" letter-spacing="2">ENGINE</text>
 
-        <!-- Split annotation: upper opportunity vs lower opportunity -->
         <g opacity="0.85">
           <line x1="362" y1="265" x2="430" y2="220" stroke="#1e40af" stroke-width="1"/>
           <text x="435" y="218" font-size="11" fill="#1e40af" font-weight="600">当下要拿下</text>
@@ -310,7 +207,7 @@
 
     <div class="legend">
       <div class="legend-card" style="background:linear-gradient(135deg,#0f172a,#1e293b);border:none;">
-        <h3 style="color:#fff;font-size:15px;">🎯 中心 = 战略机会点 + 组织执行力内核</h3>
+        <h3 style="color:#fff;font-size:15px;">中心 = 战略机会点 + 组织执行力内核</h3>
         <p style="color:#cbd5e1;margin-left:0;font-size:12px;margin-top:6px;">
           机会被三力聚焦定义，组织执行力是真正点燃机会的引擎——没有执行力，再好的交集也只是 PPT。
         </p>
@@ -351,321 +248,14 @@
     </div>
   </div>
 
-  <div class="footnote" style="border-left-color:#0f172a;">
-    <b>合并版相比两版原稿的进化：</b>
-    ① 命名采用你的"动词化"表达——更易盘点和考核；
-    ② 引入你的<b>刚需/探索横轴</b>——让"做什么"变成"先做什么、再做什么"，新增战略节奏；
-    ③ 中心做<b>双层</b>：外层"战略机会点"是结果，内核"组织执行力"是引擎——解决了"执行力 vs 客户机会"的位置之争；
+  <div class="footnote">
+    <b>模型核心逻辑：</b>
+    ① 三圈命名采用动词化表达——客户需求(是不是真问题)、产品满足(能不能做)、销售覆盖(够不够得到)，便于盘点和考核；
+    ② 引入<b>刚需/探索横轴</b>——让"做什么"变成"先做什么、再做什么"，承载战略节奏；
+    ③ 中心做<b>双层</b>：外层"战略机会点"是结果，内核"组织执行力"是引擎——机会被三力定义，执行力点燃机会；
     ④ 三圈交集自然落在刚需/探索两个区——直接对应当下经营盘 + 未来增长曲线。
   </div>
 </section>
-
-<!-- ==================== PAGE 1 ==================== -->
-<section class="page page-1" id="page1">
-  <div class="header">
-    <span class="badge">PAGE 01 · 战略架构图</span>
-    <h1>四维战略共振模型</h1>
-    <div class="subtitle">DEMAND × REACH × PRODUCT × ORG-SYNERGY  ——  寻找真正要做的事</div>
-  </div>
-
-  <div class="canvas">
-    <!-- SVG Diagram: 3 Venn circles + outer ring representing org synergy -->
-    <div class="diagram-wrap">
-      <svg viewBox="0 0 600 600">
-        <defs>
-          <radialGradient id="ringGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="70%" stop-color="#f59e0b" stop-opacity="0"/>
-            <stop offset="92%" stop-color="#f59e0b" stop-opacity="0.18"/>
-            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
-          </radialGradient>
-          <linearGradient id="demandGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#6366f1" stop-opacity="0.55"/>
-            <stop offset="100%" stop-color="#6366f1" stop-opacity="0.35"/>
-          </linearGradient>
-          <linearGradient id="reachGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#10b981" stop-opacity="0.55"/>
-            <stop offset="100%" stop-color="#10b981" stop-opacity="0.35"/>
-          </linearGradient>
-          <linearGradient id="productGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#ef4444" stop-opacity="0.55"/>
-            <stop offset="100%" stop-color="#ef4444" stop-opacity="0.35"/>
-          </linearGradient>
-          <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="2"/>
-          </filter>
-        </defs>
-
-        <!-- Outer ring: 跨部门组织协同 (enveloping enabler) -->
-        <circle cx="300" cy="300" r="288" fill="url(#ringGrad)"/>
-        <circle cx="300" cy="300" r="285" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 6" opacity="0.7"/>
-        <circle cx="300" cy="300" r="260" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2 4" opacity="0.4"/>
-
-        <!-- Label on outer ring -->
-        <path id="ringPath" d="M 300,40 A 260,260 0 1,1 299.9,40" fill="none"/>
-        <text font-size="16" font-weight="600" fill="#b45309" letter-spacing="6">
-          <textPath href="#ringPath" startOffset="50%" text-anchor="middle">跨部门组织协同  ·  ORGANIZATIONAL  SYNERGY</textPath>
-        </text>
-
-        <!-- Three Venn circles -->
-        <!-- 需求 (top) -->
-        <circle cx="300" cy="225" r="135" fill="url(#demandGrad)" mix-blend-mode="multiply"/>
-        <!-- 销售触达 (bottom-left) -->
-        <circle cx="235" cy="345" r="135" fill="url(#reachGrad)" mix-blend-mode="multiply"/>
-        <!-- 产品力 (bottom-right) -->
-        <circle cx="365" cy="345" r="135" fill="url(#productGrad)" mix-blend-mode="multiply"/>
-
-        <!-- Center sweet spot marker -->
-        <circle cx="300" cy="305" r="32" fill="#0f172a"/>
-        <circle cx="300" cy="305" r="32" fill="none" stroke="#fff" stroke-width="2"/>
-        <text x="300" y="302" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">目标客户</text>
-        <text x="300" y="316" text-anchor="middle" font-size="9" fill="#cbd5e1" letter-spacing="1">SWEET SPOT</text>
-
-        <!-- Circle labels -->
-        <text x="300" y="140" text-anchor="middle" font-size="20" font-weight="700" fill="#3730a3">需求</text>
-        <text x="300" y="160" text-anchor="middle" font-size="10" fill="#6366f1" letter-spacing="2">DEMAND</text>
-
-        <text x="175" y="400" text-anchor="middle" font-size="20" font-weight="700" fill="#065f46">销售触达</text>
-        <text x="175" y="420" text-anchor="middle" font-size="10" fill="#10b981" letter-spacing="2">SALES REACH</text>
-
-        <text x="425" y="400" text-anchor="middle" font-size="20" font-weight="700" fill="#991b1b">产品力</text>
-        <text x="425" y="420" text-anchor="middle" font-size="10" fill="#ef4444" letter-spacing="2">PRODUCT</text>
-
-        <!-- Connector lines showing synergy enabling -->
-        <g stroke="#f59e0b" stroke-width="1" opacity="0.35" stroke-dasharray="3 3">
-          <line x1="300" y1="60" x2="300" y2="120"/>
-          <line x1="100" y1="450" x2="160" y2="400"/>
-          <line x1="500" y1="450" x2="440" y2="400"/>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Legend -->
-    <div class="legend">
-      <div class="legend-card">
-        <div class="row">
-          <div class="dot" style="background:#6366f1"></div>
-          <h3>需求 · DEMAND</h3>
-        </div>
-        <p>客户真实的、未被满足的、可付费的业务诉求与价值期待。</p>
-      </div>
-      <div class="legend-card">
-        <div class="row">
-          <div class="dot" style="background:#10b981"></div>
-          <h3>销售触达能力 · REACH</h3>
-        </div>
-        <p>渠道覆盖、关键人触达、销售转化与客户信任建立的能力。</p>
-      </div>
-      <div class="legend-card">
-        <div class="row">
-          <div class="dot" style="background:#ef4444"></div>
-          <h3>产品力 · PRODUCT</h3>
-        </div>
-        <p>解决方案的功能成熟度、差异化优势与交付兑现能力。</p>
-      </div>
-      <div class="legend-card">
-        <div class="row">
-          <div class="dot" style="background:#f59e0b"></div>
-          <h3>跨部门组织协同 · SYNERGY</h3>
-        </div>
-        <p>包裹在三圈之外的"使能层"——决定三种能力能否同时发力、同频共振。</p>
-      </div>
-      <div class="legend-card core">
-        <div class="row">
-          <div class="dot" style="background:#fff"></div>
-          <h3>三圈交集 = 真正要做的事</h3>
-        </div>
-        <p>有需求、能触达、能交付——这就是战略聚焦的目标客户与机会窗口。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="footnote">
-    <b>为什么是"环"而不是第四个圈：</b>
-    需求、触达、产品力都是<b>外部市场维度</b>，而跨部门组织协同是<b>内部使能维度</b>——它不与前三者并列竞争空间，而是<b>包裹并放大</b>三者的合力。组织协同越强，三圈交集越大、目标客户的"甜蜜点"越深；协同断裂时，三圈即便重叠也无法形成可交付的真实机会。
-  </div>
-</section>
-
-
-<!-- ==================== PAGE 2 ==================== -->
-<section class="page page-2" id="page2">
-  <div class="header">
-    <span class="badge alt">PAGE 02 · 重新设计的理论框架</span>
-    <h1>PRISM 战略棱镜模型</h1>
-    <div class="subtitle">PERCEPTION · RESONANCE · INNOVATION · SYNERGY · MOMENTUM  ——  五维折射，价值结晶</div>
-  </div>
-
-  <div class="canvas">
-    <!-- SVG Diagram: Prism / 5-pointed crystal -->
-    <div class="diagram-wrap">
-      <svg viewBox="0 0 600 600">
-        <defs>
-          <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#fde68a"/>
-            <stop offset="50%" stop-color="#f59e0b"/>
-            <stop offset="100%" stop-color="#7c2d12"/>
-          </radialGradient>
-          <linearGradient id="petalP" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#ec4899" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#ec4899" stop-opacity="0.3"/>
-          </linearGradient>
-          <linearGradient id="petalR" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.3"/>
-          </linearGradient>
-          <linearGradient id="petalI" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.3"/>
-          </linearGradient>
-          <linearGradient id="petalS" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#10b981" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#10b981" stop-opacity="0.3"/>
-          </linearGradient>
-          <linearGradient id="petalM" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
-          </linearGradient>
-        </defs>
-
-        <!-- Background subtle rings -->
-        <circle cx="300" cy="300" r="270" fill="none" stroke="#e5e7eb" stroke-width="1"/>
-        <circle cx="300" cy="300" r="200" fill="none" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="2 4"/>
-        <circle cx="300" cy="300" r="130" fill="none" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="2 4"/>
-
-        <!-- Five petals (pentagonal crystal facets) -->
-        <!-- Each petal: a diamond pointing from center outward -->
-        <g transform="translate(300,300)">
-          <!-- P: top (-90deg) -->
-          <g transform="rotate(0)">
-            <polygon points="0,-260 60,-130 0,-90 -60,-130" fill="url(#petalP)" stroke="#fff" stroke-width="2"/>
-            <text y="-200" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">P</text>
-            <text y="-178" text-anchor="middle" font-size="10" fill="#fff" letter-spacing="1">PERCEPTION</text>
-            <text y="-150" text-anchor="middle" font-size="11" fill="#fff">市场感知</text>
-          </g>
-          <!-- R: top-right (-90+72 = -18deg) -->
-          <g transform="rotate(72)">
-            <polygon points="0,-260 60,-130 0,-90 -60,-130" fill="url(#petalR)" stroke="#fff" stroke-width="2"/>
-            <g transform="rotate(-72)">
-              <text x="247" y="-75" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">R</text>
-              <text x="247" y="-58" text-anchor="middle" font-size="10" fill="#fff" letter-spacing="1">RESONANCE</text>
-              <text x="247" y="-40" text-anchor="middle" font-size="11" fill="#fff">客户共鸣</text>
-            </g>
-          </g>
-          <!-- I: bottom-right (54deg) -->
-          <g transform="rotate(144)">
-            <polygon points="0,-260 60,-130 0,-90 -60,-130" fill="url(#petalI)" stroke="#fff" stroke-width="2"/>
-            <g transform="rotate(-144)">
-              <text x="152" y="207" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">I</text>
-              <text x="152" y="225" text-anchor="middle" font-size="10" fill="#fff" letter-spacing="1">INNOVATION</text>
-              <text x="152" y="243" text-anchor="middle" font-size="11" fill="#fff">产品创新</text>
-            </g>
-          </g>
-          <!-- S: bottom-left (126deg) -->
-          <g transform="rotate(216)">
-            <polygon points="0,-260 60,-130 0,-90 -60,-130" fill="url(#petalS)" stroke="#fff" stroke-width="2"/>
-            <g transform="rotate(-216)">
-              <text x="-152" y="207" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">S</text>
-              <text x="-152" y="225" text-anchor="middle" font-size="10" fill="#fff" letter-spacing="1">SYNERGY</text>
-              <text x="-152" y="243" text-anchor="middle" font-size="11" fill="#fff">组织协同</text>
-            </g>
-          </g>
-          <!-- M: top-left (198deg) -->
-          <g transform="rotate(288)">
-            <polygon points="0,-260 60,-130 0,-90 -60,-130" fill="url(#petalM)" stroke="#fff" stroke-width="2"/>
-            <g transform="rotate(-288)">
-              <text x="-247" y="-75" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">M</text>
-              <text x="-247" y="-58" text-anchor="middle" font-size="10" fill="#fff" letter-spacing="1">MOMENTUM</text>
-              <text x="-247" y="-40" text-anchor="middle" font-size="11" fill="#fff">增长势能</text>
-            </g>
-          </g>
-        </g>
-
-        <!-- Central core: 价值结晶 -->
-        <circle cx="300" cy="300" r="78" fill="url(#coreGrad)" opacity="0.95"/>
-        <circle cx="300" cy="300" r="78" fill="none" stroke="#fff" stroke-width="3"/>
-        <text x="300" y="295" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">价值结晶</text>
-        <text x="300" y="312" text-anchor="middle" font-size="9" fill="#fef3c7" letter-spacing="2">VALUE CRYSTAL</text>
-        <text x="300" y="328" text-anchor="middle" font-size="10" fill="#fef3c7">行业解决方案</text>
-
-        <!-- Light rays entering and exiting (prism metaphor) -->
-        <g opacity="0.4">
-          <line x1="20" y1="300" x2="222" y2="300" stroke="#94a3b8" stroke-width="2"/>
-          <polygon points="222,295 232,300 222,305" fill="#94a3b8"/>
-          <text x="80" y="290" font-size="10" fill="#64748b" letter-spacing="1">市场信号入射</text>
-
-          <line x1="378" y1="300" x2="580" y2="300" stroke="#f59e0b" stroke-width="2"/>
-          <polygon points="378,295 368,300 378,305" fill="#f59e0b"/>
-          <text x="430" y="290" font-size="10" fill="#b45309" letter-spacing="1">价值光谱输出</text>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Right column: framework explanation -->
-    <div>
-      <div class="legend-card" style="background:linear-gradient(135deg,#fdf2f8,#fef3c7);border:none;margin-bottom:18px;">
-        <h3 style="font-size:16px;margin-bottom:8px;color:#7c2d12;">核心理念</h3>
-        <p style="margin-left:0;font-size:13px;color:#7c2d12;line-height:1.7;">
-          市场是<b>白光</b>，进入企业这块<b>战略棱镜</b>后，被五个维度折射并重新组合，最终结晶为可被客户感知的<b>行业价值光谱</b>。<br>
-          五维缺一，光线即散；五维同频，价值即放大。
-        </p>
-      </div>
-
-      <div class="framework-meta">
-        <div class="meta-pill" style="border-left:3px solid #ec4899;">
-          <div class="num">01 · P</div>
-          <div class="label">市场感知 Perception</div>
-          <div class="desc">趋势雷达、客户洞察、竞争情报</div>
-        </div>
-        <div class="meta-pill" style="border-left:3px solid #8b5cf6;">
-          <div class="num">02 · R</div>
-          <div class="label">客户共鸣 Resonance</div>
-          <div class="desc">价值主张匹配、品牌信任、关键决策人共识</div>
-        </div>
-        <div class="meta-pill" style="border-left:3px solid #06b6d4;">
-          <div class="num">03 · I</div>
-          <div class="label">产品创新 Innovation</div>
-          <div class="desc">差异化方案、技术壁垒、可交付兑现</div>
-        </div>
-        <div class="meta-pill" style="border-left:3px solid #10b981;">
-          <div class="num">04 · S</div>
-          <div class="label">组织协同 Synergy</div>
-          <div class="desc">跨部门拉通、流程闭环、激励一致</div>
-        </div>
-        <div class="meta-pill" style="border-left:3px solid #f59e0b;grid-column:span 2;">
-          <div class="num">05 · M</div>
-          <div class="label">增长势能 Momentum</div>
-          <div class="desc">复利效应、生态扩张、数据飞轮的持续动能——决定模型能否从"一次成交"走向"长期复购+口碑裂变"</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footnote alt">
-    <b>PRISM 相比经典 Venn 模型的进化：</b>
-    ① 从<b>静态交集</b>升级为<b>动态折射</b>——市场信号是流动的，企业能力是有方向的；
-    ② 引入<b>"势能"维度</b>——回答"做成之后怎么持续"这个被三圈模型忽略的问题；
-    ③ 中心从"目标客户"升级为<b>"价值结晶"</b>——客户只是受众，结晶出来的解决方案才是企业的真正资产。
-  </div>
-</section>
-
-<script>
-  function setActive(el){
-    document.querySelectorAll('.nav a').forEach(a=>a.classList.remove('active'));
-    el.classList.add('active');
-  }
-  // auto-highlight nav on scroll
-  const sections = document.querySelectorAll('.page');
-  const links = document.querySelectorAll('.nav a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      const top = s.offsetTop - 100;
-      if (window.scrollY >= top) current = s.id;
-    });
-    links.forEach(l => {
-      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-    });
-  });
-</script>
 
 </body>
 </html>
