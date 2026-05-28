@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>商机数量统计 - 产品 × 阶段</title>
+<style>
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; margin: 24px; color: #222; }
+h1 { font-size: 20px; margin-bottom: 6px; }
+.summary { font-size: 14px; color: #555; margin: 8px 0 18px; }
+.summary b { color: #c0392b; }
+table { border-collapse: collapse; font-size: 13px; }
+th, td { border: 1px solid #d0d7de; padding: 6px 10px; text-align: center; }
+th { background: #f3f6fa; font-weight: 600; }
+th.prod, td.prod { text-align: left; background: #fafbfc; font-weight: 600; }
+tr:hover td { background: #fff7e6; }
+td.zero { color: #bbb; }
+tr.total td, tr.total th { background: #eef3fb; font-weight: 700; }
+td.total-col { background: #eef3fb; font-weight: 700; }
+.heat-1 { background: #eaf4ff; }
+.heat-2 { background: #cfe5ff; }
+.heat-3 { background: #a8d1ff; }
+.heat-4 { background: #7fbcff; color: #0b3a6b; }
+.heat-5 { background: #4ea1ff; color: #fff; }
+.note { font-size: 12px; color: #888; margin-top: 12px; }
+</style>
+</head>
+<body>
+<h1>商机数量统计 — 按产品 × 阶段</h1>
+<div class="summary">数据范围：7 个 sheet 页合计。共 <b>219</b> 条商机；另有 <b>128</b> 条线索（未计入下表）。</div>
+<table>
+<thead><tr><th class="prod">产品 \ 阶段</th>
+<th>P0需求阶段10%</th>
+<th>P1方案确认20%</th>
+<th>P2项目立项30%</th>
+<th>P3选型阶段1-POC40%</th>
+<th>P4选型阶段2-招投标50%</th>
+<th>P5商务谈判70%</th>
+<th>P6合同归档100%</th>
+<th>P7实施交付</th>
+<th>P9关闭</th>
+<th>合计</th></tr></thead>
+<tbody>
+<tr><td class="prod">知数</td>
+<td class="heat-5">17</td>
+<td class="heat-4">11</td>
+<td class="heat-3">9</td>
+<td class="heat-3">9</td>
+<td class="heat-1">3</td>
+<td class="heat-1">3</td>
+<td class="zero"></td>
+<td class="heat-1">2</td>
+<td class="zero"></td>
+<td class="total-col">54</td></tr>
+<tr><td class="prod">大模型安全围栏</td>
+<td class="heat-5">14</td>
+<td class="heat-2">5</td>
+<td class="heat-2">4</td>
+<td class="heat-5">15</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="heat-1">1</td>
+<td class="total-col">40</td></tr>
+<tr><td class="prod">数据中台</td>
+<td class="heat-2">4</td>
+<td class="heat-3">8</td>
+<td class="heat-2">5</td>
+<td class="heat-3">7</td>
+<td class="heat-1">1</td>
+<td class="heat-2">5</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">30</td></tr>
+<tr><td class="prod">云原生</td>
+<td class="zero"></td>
+<td class="heat-2">4</td>
+<td class="heat-1">2</td>
+<td class="heat-1">3</td>
+<td class="heat-1">1</td>
+<td class="heat-2">5</td>
+<td class="heat-1">1</td>
+<td class="heat-3">7</td>
+<td class="zero"></td>
+<td class="total-col">23</td></tr>
+<tr><td class="prod">销售Agent</td>
+<td class="heat-3">7</td>
+<td class="heat-2">6</td>
+<td class="heat-1">1</td>
+<td class="heat-2">4</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">18</td></tr>
+<tr><td class="prod">AI知识库</td>
+<td class="heat-3">8</td>
+<td class="heat-2">6</td>
+<td class="heat-1">1</td>
+<td class="heat-1">2</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">17</td></tr>
+<tr><td class="prod">其他</td>
+<td class="heat-1">2</td>
+<td class="heat-1">3</td>
+<td class="heat-1">3</td>
+<td class="zero"></td>
+<td class="heat-1">3</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">2</td>
+<td class="zero"></td>
+<td class="total-col">13</td></tr>
+<tr><td class="prod">AI网关</td>
+<td class="heat-1">2</td>
+<td class="heat-1">3</td>
+<td class="heat-1">1</td>
+<td class="heat-2">4</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="total-col">11</td></tr>
+<tr><td class="prod">RTC/IM</td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="heat-1">2</td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">2</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">6</td></tr>
+<tr><td class="prod">暂无</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="total-col">2</td></tr>
+<tr><td class="prod">AI知识库,数据中台</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">1</td></tr>
+<tr><td class="prod">easycopliot</td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">1</td></tr>
+<tr><td class="prod">网易数帆</td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">1</td></tr>
+<tr><td class="prod">AI知识库,大模型安全围栏,AI网关,其他</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">1</td></tr>
+<tr><td class="prod">知数,数据中台</td>
+<td class="heat-1">1</td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="zero"></td>
+<td class="total-col">1</td></tr>
+<tr class="total"><td class="prod">合计</td>
+<td>56</td>
+<td>48</td>
+<td>29</td>
+<td>47</td>
+<td>8</td>
+<td>13</td>
+<td>3</td>
+<td>13</td>
+<td>2</td>
+<td>219</td></tr>
+</tbody></table>
+<div class="note">注：1) 标签为「03商机」的记录计入统计；标签为「01线索」共 128 条，未计入。<br>2) 产品列中含逗号的项表示该商机涉及多个产品，按原始填写保留。</div>
+</body></html>
