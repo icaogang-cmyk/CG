@@ -145,6 +145,173 @@
 
 <!-- =================== 第二章 =================== -->
 <h2>第二章　引入"战略机会盘"——理解金融行业线在做什么（5 分钟）</h2>
+
+<style>
+.so-board-host * { box-sizing: border-box; margin: 0; padding: 0; }
+.so-board-host { font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; background: #f3f5f8; color: #1f2937; line-height: 1.6; margin: 20px 0; border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; }
+.so-board-host .page { padding: 40px 50px 50px; display: flex; flex-direction: column; background: linear-gradient(180deg, rgba(99,102,241,0.06) 0%, rgba(99,102,241,0.06) 48%, transparent 50%, transparent 52%, rgba(245,158,11,0.06) 54%, rgba(245,158,11,0.06) 100%), #fafbfc; }
+.so-board-host .header { margin-bottom: 30px; }
+.so-board-host .badge { display: inline-block; background: linear-gradient(135deg,#0f172a,#6366f1); color: #fff; font-size: 11px; letter-spacing: 2px; padding: 4px 12px; border-radius: 4px; margin-bottom: 14px; }
+.so-board-host h1 { font-size: 28px; font-weight: 700; color: #0f172a; letter-spacing: 1px; margin-bottom: 8px; border: none; padding: 0; background: none; }
+.so-board-host .subtitle { color: #64748b; font-size: 13px; letter-spacing: 1px; }
+.so-board-host .canvas { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; margin-top: 20px; }
+.so-board-host .diagram-wrap { position: relative; aspect-ratio: 1 / 1; max-width: 640px; margin: 0 auto; width: 100%; }
+.so-board-host .diagram-wrap svg { width: 100%; height: 100%; display: block; }
+.so-board-host .legend { display: flex; flex-direction: column; gap: 14px; }
+.so-board-host .legend-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 16px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+.so-board-host .legend-card .row { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.so-board-host .dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+.so-board-host .legend-card h3 { font-size: 14px; font-weight: 600; color: #0f172a; border: none; padding: 0; margin: 0; }
+.so-board-host .legend-card p { color: #64748b; font-size: 12px; margin: 0 0 0 26px; }
+.so-board-host .footnote { margin-top: 26px; padding: 18px 22px; background: #fff; border-left: 4px solid #0f172a; border-radius: 8px; font-size: 12px; color: #475569; line-height: 1.7; }
+.so-board-host .footnote b { color: #0f172a; }
+</style>
+
+<div class="so-board-host">
+<section class="page" id="page0">
+  <div class="header">
+    <span class="badge">战略架构图 · 合并优化版</span>
+    <h1>战略机会盘 · Strategic Opportunity Board</h1>
+    <div class="subtitle">客户需求 × 产品满足 × 销售覆盖  +  刚需/探索 战略分层  +  组织执行力内核</div>
+  </div>
+
+  <div class="canvas">
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 600 600">
+        <defs>
+          <linearGradient id="zoneTop" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.1"/>
+          </linearGradient>
+          <linearGradient id="zoneBot" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#fef3c7" stop-opacity="0.6"/>
+          </linearGradient>
+          <linearGradient id="cDemand" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10b981" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#10b981" stop-opacity="0.3"/>
+          </linearGradient>
+          <linearGradient id="cProduct" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.3"/>
+          </linearGradient>
+          <linearGradient id="cSales" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#eab308" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#eab308" stop-opacity="0.3"/>
+          </linearGradient>
+          <radialGradient id="engineCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#fca5a5"/>
+            <stop offset="60%" stop-color="#dc2626"/>
+            <stop offset="100%" stop-color="#7f1d1d"/>
+          </radialGradient>
+        </defs>
+
+        <rect x="0" y="0" width="600" height="290" fill="url(#zoneTop)"/>
+        <rect x="0" y="310" width="600" height="290" fill="url(#zoneBot)"/>
+
+        <line x1="40" y1="300" x2="560" y2="300" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+
+        <g>
+          <rect x="25" y="155" width="60" height="26" rx="13" fill="#1e40af"/>
+          <text x="55" y="173" text-anchor="middle" font-size="13" fill="#fff" font-weight="600" letter-spacing="2">刚需</text>
+          <text x="55" y="195" text-anchor="middle" font-size="9" fill="#1e40af" letter-spacing="1">现在收割区</text>
+        </g>
+        <g>
+          <rect x="25" y="420" width="60" height="26" rx="13" fill="#b45309"/>
+          <text x="55" y="438" text-anchor="middle" font-size="13" fill="#fff" font-weight="600" letter-spacing="2">探索</text>
+          <text x="55" y="460" text-anchor="middle" font-size="9" fill="#b45309" letter-spacing="1">未来布局区</text>
+        </g>
+
+        <g>
+          <text x="555" y="100" text-anchor="end" font-size="10" fill="#64748b" letter-spacing="1">▲ 高确定性 · 高客单成熟度</text>
+          <text x="555" y="555" text-anchor="end" font-size="10" fill="#64748b" letter-spacing="1">▼ 低确定性 · 高增长想象力</text>
+        </g>
+
+        <circle cx="300" cy="225" r="140" fill="url(#cDemand)" mix-blend-mode="multiply"/>
+        <text x="300" y="120" text-anchor="middle" font-size="20" font-weight="700" fill="#065f46">客户需求</text>
+        <text x="300" y="138" text-anchor="middle" font-size="10" fill="#10b981" letter-spacing="2">CUSTOMER DEMAND</text>
+
+        <circle cx="230" cy="355" r="140" fill="url(#cProduct)" mix-blend-mode="multiply"/>
+        <text x="155" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#1e40af">产品满足</text>
+        <text x="155" y="492" text-anchor="middle" font-size="10" fill="#3b82f6" letter-spacing="2">PRODUCT FIT</text>
+
+        <circle cx="370" cy="355" r="140" fill="url(#cSales)" mix-blend-mode="multiply"/>
+        <text x="445" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#854d0e">销售覆盖</text>
+        <text x="445" y="492" text-anchor="middle" font-size="10" fill="#eab308" letter-spacing="2">SALES COVERAGE</text>
+
+        <ellipse cx="300" cy="305" rx="62" ry="78" fill="#fff" stroke="#0f172a" stroke-width="2.5" opacity="0.95"/>
+        <text x="300" y="245" text-anchor="middle" font-size="10" fill="#0f172a" font-weight="600" letter-spacing="3">战略机会点</text>
+
+        <ellipse cx="300" cy="305" rx="36" ry="55" fill="url(#engineCore)"/>
+        <text x="300" y="297" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">组织</text>
+        <text x="300" y="312" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">执行力</text>
+        <text x="300" y="327" text-anchor="middle" font-size="7" fill="#fee2e2" letter-spacing="2">ENGINE</text>
+
+        <g opacity="0.85">
+          <line x1="362" y1="265" x2="430" y2="220" stroke="#1e40af" stroke-width="1"/>
+          <text x="435" y="218" font-size="11" fill="#1e40af" font-weight="600">当下要拿下</text>
+          <text x="435" y="232" font-size="9" fill="#1e40af">三力共振·已成熟客户</text>
+
+          <line x1="362" y1="345" x2="430" y2="395" stroke="#b45309" stroke-width="1"/>
+          <text x="435" y="395" font-size="11" fill="#b45309" font-weight="600">未来要押注</text>
+          <text x="435" y="409" font-size="9" fill="#b45309">三力初见·培育型客户</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <div class="legend-card" style="background:linear-gradient(135deg,#0f172a,#1e293b);border:none;">
+        <h3 style="color:#fff;font-size:15px;">🎯 中心 = 战略机会点 + 组织执行力内核</h3>
+        <p style="color:#cbd5e1;margin-left:0;font-size:12px;margin-top:6px;">
+          机会被三力聚焦定义，组织执行力是真正点燃机会的引擎——没有执行力，再好的交集也只是 PPT。
+        </p>
+      </div>
+
+      <div class="legend-card">
+        <div class="row">
+          <div class="dot" style="background:#10b981"></div>
+          <h3>客户需求 · 是不是真问题</h3>
+        </div>
+        <p>是否有付费意愿、决策权、紧迫感。</p>
+      </div>
+      <div class="legend-card">
+        <div class="row">
+          <div class="dot" style="background:#3b82f6"></div>
+          <h3>产品满足 · 我们能不能做</h3>
+        </div>
+        <p>方案成熟度、差异化、可交付。</p>
+      </div>
+      <div class="legend-card">
+        <div class="row">
+          <div class="dot" style="background:#eab308"></div>
+          <h3>销售覆盖 · 我们够不够得到</h3>
+        </div>
+        <p>渠道、关键人、签单转化能力。</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;">
+        <div style="background:#dbeafe;border-radius:10px;padding:12px;border-left:3px solid #1e40af;">
+          <div style="font-size:12px;font-weight:700;color:#1e3a8a;">▲ 刚需区策略</div>
+          <div style="font-size:11px;color:#1e3a8a;margin-top:4px;line-height:1.5;">标准化、规模化、提效降本</div>
+        </div>
+        <div style="background:#fef3c7;border-radius:10px;padding:12px;border-left:3px solid #b45309;">
+          <div style="font-size:12px;font-weight:700;color:#78350f;">▼ 探索区策略</div>
+          <div style="font-size:11px;color:#78350f;margin-top:4px;line-height:1.5;">定制化、灯塔客户、共创验证</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <b>模型核心逻辑：</b>
+    ① 三圈命名采用动词化表达——客户需求(是不是真问题)、产品满足(能不能做)、销售覆盖(够不够得到)，便于盘点和考核；
+    ② 引入<b>刚需/探索横轴</b>——让"做什么"变成"先做什么、再做什么"，承载战略节奏；
+    ③ 中心做<b>双层</b>：外层"战略机会点"是结果，内核"组织执行力"是引擎——机会被三力定义，执行力点燃机会；
+    ④ 三圈交集自然落在刚需/探索两个区——直接对应当下经营盘 + 未来增长曲线。
+  </div>
+</section>
+</div>
+
 <div class="new">
 本章是 V1 版本的<b>核心新增</b>。先把分析框架立住，后面所有问题都装到这张盘里回答，避免老板和我们各说各话。
 </div>
@@ -343,6 +510,166 @@
 
 <!-- =================== 第八章 =================== -->
 <h2>第八章　解决方案是否成立 & 可复制性（10 分钟）</h2>
+
+<style>
+.sd-host * { box-sizing: border-box; }
+.sd-host { font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; background: #fafafa; padding: 30px 32px 36px; margin: 20px 0; border-radius: 12px; border: 1px solid #e5e7eb; color: #1a1a1a; }
+.sd-banner { background: #ededed; padding: 14px 24px; text-align: center; font-size: 14px; color: #1a1a1a; font-weight: 600; margin-bottom: 28px; border-radius: 3px; letter-spacing: 0.5px; }
+.sd-banner .sd-red { color: #b03129; }
+.sd-main { display: grid; grid-template-columns: 1fr 2.6fr 1fr; gap: 22px; align-items: stretch; }
+.sd-col-label { font-size: 11px; color: #b03129; letter-spacing: 3px; margin-bottom: 14px; border-bottom: 2px solid #b03129; padding-bottom: 8px; font-weight: 600; }
+.sd-card { background: #f5f5f5; padding: 14px 16px; margin-bottom: 12px; border-radius: 3px; }
+.sd-card-tag { font-size: 10px; color: #b03129; letter-spacing: 2px; margin-bottom: 6px; font-weight: 600; }
+.sd-card-title { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; letter-spacing: 1px; }
+.sd-card-desc { font-size: 11px; color: #666; line-height: 1.7; }
+.sd-center { display: flex; flex-direction: column; }
+.sd-core { background: #b03129; color: #fff; padding: 22px 28px; border-radius: 3px; margin-bottom: 22px; }
+.sd-core-tag { font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.85); margin-bottom: 10px; font-weight: 600; }
+.sd-core-title { font-size: 26px; font-weight: 700; margin-bottom: 12px; letter-spacing: 2px; }
+.sd-core-divider { border-top: 1px dashed rgba(255,255,255,0.5); margin: 10px 0 14px; }
+.sd-core-desc { font-size: 12px; line-height: 1.8; color: #f5f5f5; }
+.sd-core-desc .em { color: #ffd54f; }
+.sd-pillars-title-wrap { text-align: center; margin: 6px 0 18px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+.sd-pillars-title-wrap .line { flex: 1; max-width: 120px; height: 1px; background: #b03129; }
+.sd-pillars-title-wrap .dot { width: 8px; height: 8px; background: #b03129; border-radius: 50%; }
+.sd-pillars-title { font-size: 17px; font-weight: 700; color: #1a1a1a; letter-spacing: 10px; }
+.sd-pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 18px; }
+.sd-pillar { border: 1px solid #b03129; border-radius: 3px; padding: 14px 8px 12px; text-align: center; background: #fff; }
+.sd-pillar-no { font-size: 9px; color: #999; letter-spacing: 2px; margin-bottom: 10px; font-weight: 600; }
+.sd-pillar-icon { font-size: 26px; color: #b03129; margin-bottom: 8px; line-height: 1; }
+.sd-pillar-title { font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; letter-spacing: 1px; }
+.sd-pillar-desc { font-size: 10px; color: #b03129; line-height: 1.6; }
+.sd-outcome { background: #b03129; color: #fff; padding: 16px 22px; border-radius: 3px; display: grid; grid-template-columns: 130px repeat(4, 1fr); gap: 10px; align-items: center; }
+.sd-outcome-label { font-size: 11px; line-height: 1.4; }
+.sd-outcome-label .tag { display: inline-block; background: #fff; color: #b03129; padding: 2px 8px; font-size: 11px; font-weight: 700; border-radius: 2px; margin-bottom: 6px; }
+.sd-outcome-label .en { font-size: 10px; color: rgba(255,255,255,0.7); letter-spacing: 1px; }
+.sd-outcome-label .cn { font-size: 12px; font-weight: 700; }
+.sd-outcome-item { font-size: 12px; text-align: center; line-height: 1.5; }
+.sd-outcome-item .arr { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+@media (max-width: 900px) { .sd-main { grid-template-columns: 1fr; } }
+</style>
+
+<div class="sd-host">
+  <div class="sd-banner">
+    连接「客户业务场景」与「公司产品能力」的关键中枢——以行业洞察驱动方案设计，以方案落地驱动商业增长
+  </div>
+
+  <div class="sd-main">
+
+    <div class="sd-col-inputs">
+      <div class="sd-col-label">INPUTS · 输入端</div>
+      <div class="sd-card">
+        <div class="sd-card-tag">A.01 / CLIENT</div>
+        <div class="sd-card-title">行业客户</div>
+        <div class="sd-card-desc">金融·央国企<br>新能源·物流·制造业</div>
+      </div>
+      <div class="sd-card">
+        <div class="sd-card-tag">A.02 / MARKET</div>
+        <div class="sd-card-title">市场洞察</div>
+        <div class="sd-card-desc">行业趋势·竞争格局<br>客户痛点·业务诉求</div>
+      </div>
+      <div class="sd-card">
+        <div class="sd-card-tag">A.03 / ASSETS</div>
+        <div class="sd-card-title">公司能力</div>
+        <div class="sd-card-desc">网易数帆·网易易盾<br>网易云商·网易云信·网易CW</div>
+      </div>
+      <div class="sd-card">
+        <div class="sd-card-tag">A.04 / TEAM</div>
+        <div class="sd-card-title">协同资源</div>
+        <div class="sd-card-desc">销售·产解·产品<br>研发·交付·服务</div>
+      </div>
+    </div>
+
+    <div class="sd-center">
+      <div class="sd-core">
+        <div class="sd-core-tag">CORE ROLE · 核心定位</div>
+        <div class="sd-core-title">行业解决方案总监</div>
+        <div class="sd-core-divider"></div>
+        <div class="sd-core-desc">
+          以<span class="em">「行业·场景·技术」</span>三维视角，将公司分散的产品能力，重组为客户真正愿意买单的<span class="em">「行业级解决方案」</span>，并主导其从售前洞察到规模化复制的全生命周期。
+        </div>
+      </div>
+
+      <div class="sd-pillars-title-wrap">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="sd-pillars-title">五大价值支柱</div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+
+      <div class="sd-pillars">
+        <div class="sd-pillar">
+          <div class="sd-pillar-no">P / 01</div>
+          <div class="sd-pillar-icon">◎</div>
+          <div class="sd-pillar-title">行业洞察</div>
+          <div class="sd-pillar-desc">深耕垂直行业<br>识别商业机会</div>
+        </div>
+        <div class="sd-pillar">
+          <div class="sd-pillar-no">P / 02</div>
+          <div class="sd-pillar-icon">▦</div>
+          <div class="sd-pillar-title">方案设计</div>
+          <div class="sd-pillar-desc">能力组合编排<br>价值主张定义</div>
+        </div>
+        <div class="sd-pillar">
+          <div class="sd-pillar-no">P / 03</div>
+          <div class="sd-pillar-icon">✓</div>
+          <div class="sd-pillar-title">商机转换</div>
+          <div class="sd-pillar-desc">售前攻坚<br>大客户拿单</div>
+        </div>
+        <div class="sd-pillar">
+          <div class="sd-pillar-no">P / 04</div>
+          <div class="sd-pillar-icon">💬</div>
+          <div class="sd-pillar-title">跨部门协同</div>
+          <div class="sd-pillar-desc">打通产研销服<br>资源高效流转</div>
+        </div>
+        <div class="sd-pillar">
+          <div class="sd-pillar-no">P / 05</div>
+          <div class="sd-pillar-icon">📈</div>
+          <div class="sd-pillar-title">规模复制</div>
+          <div class="sd-pillar-desc">沉淀方法论<br>驱动业务增长</div>
+        </div>
+      </div>
+
+      <div class="sd-outcome">
+        <div class="sd-outcome-label">
+          <span class="tag">价值闭环</span><br>
+          <span class="en">OUTCOME</span><br>
+          <span class="cn">价值产出</span>
+        </div>
+        <div class="sd-outcome-item"><span class="arr">↑ 营收</span>规模化增长</div>
+        <div class="sd-outcome-item"><span class="arr">↑ 客单</span>大客户突破</div>
+        <div class="sd-outcome-item"><span class="arr">↓ 成本</span>交付提效</div>
+        <div class="sd-outcome-item"><span class="arr">↑ 心智</span>行业品牌建立</div>
+      </div>
+    </div>
+
+    <div class="sd-col-outputs">
+      <div class="sd-col-label">OUTPUTS · 输出端</div>
+      <div class="sd-card">
+        <div class="sd-card-tag">B.01 / SOLUTION</div>
+        <div class="sd-card-title">行业级方案</div>
+        <div class="sd-card-desc">可复制·可量化<br>场景化标准化产品</div>
+      </div>
+      <div class="sd-card">
+        <div class="sd-card-tag">B.02 / DEAL</div>
+        <div class="sd-card-title">标杆案例</div>
+        <div class="sd-card-desc">头部客户签约<br>百万级合同落地</div>
+      </div>
+      <div class="sd-card">
+        <div class="sd-card-tag">B.03 / GROWTH</div>
+        <div class="sd-card-title">业务增长</div>
+        <div class="sd-card-desc">收入规模·利润率<br>市场份额提升</div>
+      </div>
+      <div class="sd-card">
+        <div class="sd-card-tag">B.04 / BRAND</div>
+        <div class="sd-card-title">行业心智</div>
+        <div class="sd-card-desc">行业地位·影响力<br>形成品牌护城河</div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <h3>8.1 跨产品线行业方案视角——已验证有效</h3>
 <ul>
