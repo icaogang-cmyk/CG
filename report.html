@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本周项目进展及市场工作汇报</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #eef1f6;
+    color: #222;
+    line-height: 1.6;
+    padding: 32px 20px;
+  }
+  .wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
+  .page-header {
+    background: linear-gradient(135deg, #1f4e79, #2e6da4);
+    color: #fff;
+    padding: 28px 36px;
+  }
+  .page-header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .page-header .meta {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  .section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1f4e79;
+    padding: 22px 36px 12px;
+    border-left: 4px solid #2e6da4;
+    margin: 8px 0 0;
+  }
+  .table-scroll { overflow-x: auto; padding: 0 24px 12px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+    min-width: 1080px;
+  }
+  thead th {
+    background: #1f4e79;
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: center;
+    border: 1px solid #2e6da4;
+    vertical-align: middle;
+  }
+  thead th.win  { background: #2f6f4f; }
+  thead th.recv { background: #2f6f4f; }
+  thead th.prog { background: #8c5a2b; }
+  thead th.issue{ background: #9c4a2b; }
+  tbody td {
+    padding: 10px 8px;
+    border: 1px solid #dfe3ea;
+    vertical-align: middle;
+  }
+  tbody tr:nth-child(even) { background: #f6f8fb; }
+  tbody tr:hover { background: #eaf1fa; }
+  .c-center { text-align: center; }
+  .c-name { font-weight: 600; color: #1f4e79; text-align: center; }
+  .c-amount { text-align: right; font-weight: 600; color: #b3471f; font-variant-numeric: tabular-nums; }
+  .c-prog { color: #5a4327; }
+  .c-issue { color: #8a3b22; }
+  .stage {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e6eef7;
+    color: #1f4e79;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .type-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+  }
+  .t-tech { background: #2e6da4; }
+  .t-data { background: #5b9bd5; }
+  .t-int  { background: #70ad47; }
+  .none { color: #9aa0a6; }
+  tr.total-row td {
+    background: #dce6f1;
+    font-weight: 700;
+    color: #1f4e79;
+    font-size: 14px;
+  }
+  /* Weekly work */
+  .week-block { padding: 8px 36px 32px; }
+  .day-row {
+    display: flex;
+    border: 1px solid #dfe3ea;
+    border-top: none;
+  }
+  .day-row:first-child { border-top: 1px solid #dfe3ea; }
+  .day-label {
+    flex: 0 0 90px;
+    background: #1f4e79;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 8px;
+  }
+  .day-row:nth-child(even) .day-label { background: #2e6da4; }
+  .day-content {
+    flex: 1;
+    padding: 12px 18px;
+    font-size: 13.5px;
+    background: #fff;
+  }
+  .day-row:nth-child(even) .day-content { background: #f6f8fb; }
+  .day-content ol { margin: 0; padding-left: 20px; }
+  .day-content li { margin: 3px 0; }
+  .footer {
+    text-align: center;
+    color: #9aa0a6;
+    font-size: 12px;
+    padding: 18px;
+    border-top: 1px solid #eee;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .wrap { box-shadow: none; }
+    tbody tr:hover { background: inherit; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="page-header">
+    <h1>本周项目进展及市场工作汇报</h1>
+    <div class="meta">销售经理：李静芳 &nbsp;|&nbsp; 汇报日期：2026 年 6 月 2 日</div>
+  </div>
+
+  <h2 class="section-title">一、项目进展情况</h2>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:60px;">序号</th>
+          <th style="min-width:180px;">项目名称</th>
+          <th style="width:90px;">商机金额<br>（万元）</th>
+          <th style="width:80px;">商机阶段</th>
+          <th style="width:90px;">项目类型</th>
+          <th style="width:80px;">销售经理</th>
+          <th class="win" style="width:80px;">预计赢取<br>（月）</th>
+          <th class="recv" style="width:90px;">预计确收<br>（月）</th>
+          <th class="prog" style="min-width:220px;">本周进展及后续安排</th>
+          <th class="issue" style="min-width:220px;">存在的问题或需要协助的地方</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="c-center">1</td>
+          <td class="c-name">马鞍山市市域低空飞行服务项目</td>
+          <td class="c-amount">2,278</td>
+          <td class="c-center"><span class="stage">L4.1</span></td>
+          <td class="c-center"><span class="type-badge t-tech">技术服务</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">4</td>
+          <td class="c-center">6</td>
+          <td class="c-prog">本周完成合同签订，下个月争取首付款到位。</td>
+          <td class="c-issue">江东提出想带领导调研，没有找到合适的地方，需要领导们看看整个集团落地项目哪些能调研。</td>
+        </tr>
+        <tr>
+          <td class="c-center">2</td>
+          <td class="c-name">当涂县域空天一体管控平台建设</td>
+          <td class="c-amount">1,000</td>
+          <td class="c-center"><span class="stage">L2</span></td>
+          <td class="c-center"><span class="type-badge t-data">数据服务</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">12</td>
+          <td class="c-center">3（27年）</td>
+          <td class="c-prog">本周完成方案修订和投预流程，月底总预算 1200 万。</td>
+          <td class="c-center none">暂无</td>
+        </tr>
+        <tr>
+          <td class="c-center">3</td>
+          <td class="c-name">繁昌公安警航应用</td>
+          <td class="c-amount">400</td>
+          <td class="c-center"><span class="stage">L2</span></td>
+          <td class="c-center"><span class="type-badge t-int">系统集成</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">9</td>
+          <td class="c-center">11</td>
+          <td class="c-prog">项目目前还在数据局审核中，尚未评审。</td>
+          <td class="c-issue">目前由数据局和铁投牵头，项目不可控。</td>
+        </tr>
+        <tr>
+          <td class="c-center">4</td>
+          <td class="c-name">慈湖高新区基础设施提升工程项目</td>
+          <td class="c-amount">83</td>
+          <td class="c-center"><span class="stage">L3</span></td>
+          <td class="c-center"><span class="type-badge t-int">系统集成</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">6</td>
+          <td class="c-center">9</td>
+          <td class="c-prog">因为金额一直未谈拢，部署方式也还未确定。</td>
+          <td class="c-issue">因为电信和讯飞一直不明确需求，可能有交付延期的风险。</td>
+        </tr>
+        <tr>
+          <td class="c-center">5</td>
+          <td class="c-name">六安市耕保平台</td>
+          <td class="c-amount none">—</td>
+          <td class="c-center none">—</td>
+          <td class="c-center"><span class="type-badge t-tech">技术服务</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">12</td>
+          <td class="c-center">3（27年）</td>
+          <td class="c-prog">本周跟进业主需求，目前全省各地也在观望。</td>
+          <td class="c-center none">暂无</td>
+        </tr>
+        <tr>
+          <td class="c-center">6</td>
+          <td class="c-name">郑蒲港城管无人机服务</td>
+          <td class="c-amount">15</td>
+          <td class="c-center"><span class="stage">L3</span></td>
+          <td class="c-center"><span class="type-badge t-tech">技术服务</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">600.00%</td>
+          <td class="c-center">8</td>
+          <td class="c-prog">本周协调评标按照综合评分法。</td>
+          <td class="c-center none">暂无</td>
+        </tr>
+        <tr>
+          <td class="c-center">7</td>
+          <td class="c-name">当涂城管智慧环卫无人机场采购</td>
+          <td class="c-amount">21</td>
+          <td class="c-center"><span class="stage">L4.1</span></td>
+          <td class="c-center"><span class="type-badge t-int">系统集成</span></td>
+          <td class="c-center">李静芳</td>
+          <td class="c-center">600.00%</td>
+          <td class="c-center">8</td>
+          <td class="c-prog">本周跟进回款中，因分包几层，付款流程较慢。</td>
+          <td class="c-center none">暂无</td>
+        </tr>
+        <tr class="total-row">
+          <td class="c-center" colspan="2">合计</td>
+          <td class="c-amount">3,278</td>
+          <td colspan="7"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">二、本周市场工作及客户拜访情况</h2>
+  <div class="week-block">
+    <div class="day-row">
+      <div class="day-label">周一</div>
+      <div class="day-content">
+        <ol>
+          <li>发改委协调装备公司物流场景申报项目事宜；</li>
+          <li>花山区公安协调航线事宜；</li>
+          <li>数产合同和回款跟进；</li>
+          <li>一网统飞环保执法场景对接需求；</li>
+          <li>六安耕保平台跟进；</li>
+          <li>当涂资规数据治理需求对接；</li>
+          <li>旌德项目跟进试飞进展；</li>
+          <li>繁昌项目跟进上会和挂网；</li>
+          <li>经开区排水改造项目跟进；</li>
+          <li>深业郑蒲港招采对接；</li>
+          <li>接待省科技厅陈厅长一行。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="day-row">
+      <div class="day-label">周二</div>
+      <div class="day-content">
+        <ol>
+          <li>协调物流无人机机地、航线等事宜；</li>
+          <li>溧水区城管局向局领导汇报招采计划；</li>
+          <li>当涂城管项目跟进；</li>
+          <li>经开区排水项目跟进进展；</li>
+          <li>南京督察局来访事宜对接。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="day-row">
+      <div class="day-label">周三</div>
+      <div class="day-content">
+        <ol>
+          <li>当涂公安项目需求调整并跟进；</li>
+          <li>郑蒲港深业无人机合作跟进；</li>
+          <li>一网统飞点位协调。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="day-row">
+      <div class="day-label">周四</div>
+      <div class="day-content">
+        <ol>
+          <li>蚌埠通航智飞低空科技有限公司——一网统飞、物流应用接待；</li>
+          <li>繁昌项目跟进进展和协助；</li>
+          <li>山西运城政协来访接待；</li>
+          <li>经开区排水项目跟进联合体事宜；</li>
+          <li>一网统飞机场采购铁塔部分协调；</li>
+          <li>一网统飞点位协调；</li>
+          <li>雨山公安分局无人机反制服务对接。</li>
+        </ol>
+      </div>
+    </div>
+    <div class="day-row">
+      <div class="day-label">周五</div>
+      <div class="day-content">
+        <ol>
+          <li>国家数研院来访接待；</li>
+          <li>安工大协调装备公司项目申报事宜；</li>
+          <li>亳州耕保项目和移动沟通对接策略；</li>
+          <li>接待政协张主席、资规局领导来访。</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">本报告由项目进展数据整理生成，仅供内部汇报使用。</div>
+</div>
+</body>
+</html>
