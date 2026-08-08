@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>战略机会盘 · Strategic Opportunity Board</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+    background: #f3f5f8;
+    color: #1f2937;
+    line-height: 1.6;
+  }
+
+  .page {
+    min-height: 100vh;
+    padding: 60px 80px 80px;
+    display: flex;
+    flex-direction: column;
+    background:
+      linear-gradient(180deg, rgba(99,102,241,0.06) 0%, rgba(99,102,241,0.06) 48%, transparent 50%, transparent 52%, rgba(245,158,11,0.06) 54%, rgba(245,158,11,0.06) 100%),
+      #fafbfc;
+  }
+
+  .header { margin-bottom: 30px; }
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg,#0f172a,#6366f1);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: #64748b;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .canvas {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .diagram-wrap {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .diagram-wrap svg { width: 100%; height: 100%; display: block; }
+
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .legend-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .legend-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .legend-card .row {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 6px;
+  }
+  .dot {
+    width: 14px; height: 14px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .legend-card h3 {
+    font-size: 15px; font-weight: 600; color: #0f172a;
+  }
+  .legend-card p {
+    color: #64748b; font-size: 13px; margin-left: 26px;
+  }
+
+  .footnote {
+    margin-top: 30px;
+    padding: 20px 24px;
+    background: #fff;
+    border-left: 4px solid #0f172a;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #475569;
+  }
+  .footnote b { color: #0f172a; }
+
+  @media print {
+    .page { padding: 40px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="page" id="page0">
+  <div class="header">
+    <span class="badge">战略架构图 · 合并优化版</span>
+    <h1>战略机会盘 · Strategic Opportunity Board</h1>
+    <div class="subtitle">客户需求 × 产品满足 × 销售覆盖  +  刚需/探索 战略分层  +  组织执行力内核</div>
+  </div>
+
+  <div class="canvas">
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 600 600">
+        <defs>
+          <linearGradient id="zoneTop" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#dbeafe" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#dbeafe" stop-opacity="0.1"/>
+          </linearGradient>
+          <linearGradient id="zoneBot" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#fef3c7" stop-opacity="0.6"/>
+          </linearGradient>
+          <linearGradient id="cDemand" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10b981" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#10b981" stop-opacity="0.3"/>
+          </linearGradient>
+          <linearGradient id="cProduct" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.3"/>
+          </linearGradient>
+          <linearGradient id="cSales" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#eab308" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#eab308" stop-opacity="0.3"/>
+          </linearGradient>
+          <radialGradient id="engineCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#fca5a5"/>
+            <stop offset="60%" stop-color="#dc2626"/>
+            <stop offset="100%" stop-color="#7f1d1d"/>
+          </radialGradient>
+        </defs>
+
+        <rect x="0" y="0" width="600" height="290" fill="url(#zoneTop)"/>
+        <rect x="0" y="310" width="600" height="290" fill="url(#zoneBot)"/>
+
+        <line x1="40" y1="300" x2="560" y2="300" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.5"/>
+
+        <g>
+          <rect x="25" y="155" width="60" height="26" rx="13" fill="#1e40af"/>
+          <text x="55" y="173" text-anchor="middle" font-size="13" fill="#fff" font-weight="600" letter-spacing="2">刚需</text>
+          <text x="55" y="195" text-anchor="middle" font-size="9" fill="#1e40af" letter-spacing="1">现在收割区</text>
+        </g>
+        <g>
+          <rect x="25" y="420" width="60" height="26" rx="13" fill="#b45309"/>
+          <text x="55" y="438" text-anchor="middle" font-size="13" fill="#fff" font-weight="600" letter-spacing="2">探索</text>
+          <text x="55" y="460" text-anchor="middle" font-size="9" fill="#b45309" letter-spacing="1">未来布局区</text>
+        </g>
+
+        <g>
+          <text x="555" y="100" text-anchor="end" font-size="10" fill="#64748b" letter-spacing="1">▲ 高确定性 · 高客单成熟度</text>
+          <text x="555" y="555" text-anchor="end" font-size="10" fill="#64748b" letter-spacing="1">▼ 低确定性 · 高增长想象力</text>
+        </g>
+
+        <circle cx="300" cy="225" r="140" fill="url(#cDemand)" mix-blend-mode="multiply"/>
+        <text x="300" y="120" text-anchor="middle" font-size="20" font-weight="700" fill="#065f46">客户需求</text>
+        <text x="300" y="138" text-anchor="middle" font-size="10" fill="#10b981" letter-spacing="2">CUSTOMER DEMAND</text>
+
+        <circle cx="230" cy="355" r="140" fill="url(#cProduct)" mix-blend-mode="multiply"/>
+        <text x="155" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#1e40af">产品满足</text>
+        <text x="155" y="492" text-anchor="middle" font-size="10" fill="#3b82f6" letter-spacing="2">PRODUCT FIT</text>
+
+        <circle cx="370" cy="355" r="140" fill="url(#cSales)" mix-blend-mode="multiply"/>
+        <text x="445" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#854d0e">销售覆盖</text>
+        <text x="445" y="492" text-anchor="middle" font-size="10" fill="#eab308" letter-spacing="2">SALES COVERAGE</text>
+
+        <ellipse cx="300" cy="305" rx="62" ry="78" fill="#fff" stroke="#0f172a" stroke-width="2.5" opacity="0.95"/>
+        <text x="300" y="245" text-anchor="middle" font-size="10" fill="#0f172a" font-weight="600" letter-spacing="3">战略机会点</text>
+
+        <ellipse cx="300" cy="305" rx="36" ry="55" fill="url(#engineCore)"/>
+        <text x="300" y="297" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">组织</text>
+        <text x="300" y="312" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">执行力</text>
+        <text x="300" y="327" text-anchor="middle" font-size="7" fill="#fee2e2" letter-spacing="2">ENGINE</text>
+
+        <g opacity="0.85">
+          <line x1="362" y1="265" x2="430" y2="220" stroke="#1e40af" stroke-width="1"/>
+          <text x="435" y="218" font-size="11" fill="#1e40af" font-weight="600">当下要拿下</text>
+          <text x="435" y="232" font-size="9" fill="#1e40af">三力共振·已成熟客户</text>
+
+          <line x1="362" y1="345" x2="430" y2="395" stroke="#b45309" stroke-width="1"/>
+          <text x="435" y="395" font-size="11" fill="#b45309" font-weight="600">未来要押注</text>
+          <text x="435" y="409" font-size="9" fill="#b45309">三力初见·培育型客户</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <div class="legend-card" style="background:linear-gradient(135deg,#0f172a,#1e293b);border:none;">
+        <h3 style="color:#fff;font-size:15px;">中心 = 战略机会点 + 组织执行力内核</h3>
+        <p style="color:#cbd5e1;margin-left:0;font-size:12px;margin-top:6px;">
+          机会被三力聚焦定义，组织执行力是真正点燃机会的引擎——没有执行力，再好的交集也只是 PPT。
+        </p>
+      </div>
+
+      <div class="legend-card">
+        <div class="row">
+          <div class="dot" style="background:#10b981"></div>
+          <h3>客户需求 · 是不是真问题</h3>
+        </div>
+        <p>是否有付费意愿、决策权、紧迫感。</p>
+      </div>
+      <div class="legend-card">
+        <div class="row">
+          <div class="dot" style="background:#3b82f6"></div>
+          <h3>产品满足 · 我们能不能做</h3>
+        </div>
+        <p>方案成熟度、差异化、可交付。</p>
+      </div>
+      <div class="legend-card">
+        <div class="row">
+          <div class="dot" style="background:#eab308"></div>
+          <h3>销售覆盖 · 我们够不够得到</h3>
+        </div>
+        <p>渠道、关键人、签单转化能力。</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px;">
+        <div style="background:#dbeafe;border-radius:10px;padding:12px;border-left:3px solid #1e40af;">
+          <div style="font-size:12px;font-weight:700;color:#1e3a8a;">▲ 刚需区策略</div>
+          <div style="font-size:11px;color:#1e3a8a;margin-top:4px;line-height:1.5;">标准化、规模化、提效降本</div>
+        </div>
+        <div style="background:#fef3c7;border-radius:10px;padding:12px;border-left:3px solid #b45309;">
+          <div style="font-size:12px;font-weight:700;color:#78350f;">▼ 探索区策略</div>
+          <div style="font-size:11px;color:#78350f;margin-top:4px;line-height:1.5;">定制化、灯塔客户、共创验证</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <b>模型核心逻辑：</b>
+    ① 三圈命名采用动词化表达——客户需求(是不是真问题)、产品满足(能不能做)、销售覆盖(够不够得到)，便于盘点和考核；
+    ② 引入<b>刚需/探索横轴</b>——让"做什么"变成"先做什么、再做什么"，承载战略节奏；
+    ③ 中心做<b>双层</b>：外层"战略机会点"是结果，内核"组织执行力"是引擎——机会被三力定义，执行力点燃机会；
+    ④ 三圈交集自然落在刚需/探索两个区——直接对应当下经营盘 + 未来增长曲线。
+  </div>
+</section>
+
+</body>
+</html>
